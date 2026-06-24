@@ -1,3 +1,9 @@
+## Portfólio Web
+
+Acesse a versão web do portfólio:
+
+https://joaoacf-dv.github.io/portfolio-tecnico/
+
 # Portfólio Técnico - Infraestrutura, Automação e Desenvolvimento Aplicado
 
 ## Apresentação
