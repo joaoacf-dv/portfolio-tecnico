@@ -80,5 +80,5 @@ Este portfólio foi estruturado para apresentação pública com foco em clareza
 Este portfólio demonstra capacidade prática para atuar em infraestrutura, automação, suporte técnico, integração de sistemas, observabilidade e desenvolvimento aplicado.
 
 LinkedIn: www.linkedin.com/in/joaoacf-dv 
-GitHub: github.com/joaoacf-dev
+
 Contato: joaoacf.dv@gmail.com
