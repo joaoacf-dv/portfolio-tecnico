@@ -941,12 +941,6 @@ html[data-theme="dark"] code {
 }
 
 @media (max-width: 460px) {
-  .topnav__inner:not(.topnav__inner--simple) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.65rem;
-  }
-
   .topnav__links--always {
     width: 100%;
     justify-content: flex-start;
@@ -958,14 +952,6 @@ html[data-theme="dark"] code {
     background: rgba(12, 92, 85, 0.06);
   }
 
-  .topnav__inner:not(.topnav__inner--simple) {
-    gap: 0.75rem;
-  }
-
-  .topnav__inner:not(.topnav__inner--simple) .site-controls {
-    align-self: flex-start;
-    margin-left: 0;
-  }
 }
 
 @media (max-width: 420px) {
@@ -982,5 +968,105 @@ html[data-theme="dark"] code {
     height: 2.05rem;
     padding: 0 0.52rem;
     font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .topnav__inner--menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 0.6rem;
+    min-height: auto;
+    padding: 0.85rem 0;
+  }
+
+  .topnav__inner--menu .brand {
+    order: 1;
+    flex: 0 0 auto;
+    margin-right: auto;
+    white-space: nowrap;
+  }
+
+  .topnav__inner--menu .menu-toggle {
+    order: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    margin-left: 0;
+  }
+
+  .topnav__inner--menu .site-controls {
+    order: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    gap: 0.45rem;
+    margin-left: 0;
+  }
+
+  .topnav__inner--menu .topnav__links {
+    order: 4;
+    width: auto;
+    margin-top: 0.65rem;
+  }
+
+  .topnav__inner--index {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.6rem;
+    min-height: auto;
+    padding: 0.85rem 0;
+  }
+
+  .topnav__inner--index .topnav__links--always {
+    width: auto;
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .topnav__inner--index .site-controls {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .topnav__inner--menu,
+  .topnav__inner--index {
+    gap: 0.45rem;
+  }
+
+  .topnav__inner--menu .brand {
+    font-size: 0.98rem;
+  }
+
+  .topnav__inner--menu .menu-toggle,
+  .topnav__inner--menu .control-button,
+  .topnav__inner--index .control-button {
+    height: 2.1rem;
+  }
+
+  .topnav__inner--menu .menu-toggle {
+    padding: 0 0.75rem;
+  }
+
+  .topnav__inner--menu .control-button,
+  .topnav__inner--index .control-button {
+    min-width: 2.1rem;
+    padding: 0 0.55rem;
+  }
+
+  .topnav__inner--menu .site-controls,
+  .topnav__inner--index .site-controls {
+    gap: 0.38rem;
   }
 }
