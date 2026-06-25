@@ -8,7 +8,7 @@ Use imagens contextuais, diagramas ou prints anonimizados, preferencialmente em 
 
 ## Regras
 
-Não incluir imagens com dados reais, IPs, domínios internos, usuários, tokens, logs, credenciais ou evidências operacionais.
+Não incluir imagens com dados reais, IPs, domínios internos, usuários, chaves de acesso, logs, credenciais ou evidências operacionais.
 
 ## Ativação
 
