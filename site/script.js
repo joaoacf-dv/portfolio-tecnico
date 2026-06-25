@@ -29,6 +29,7 @@ const translations = {
     "humhub.description": "Self-hosting de aplicação web em stack LAMP.",
     "website.title": "Site Estático e Presença Digital",
     "website.description": "Presença digital com página estática, organização visual e publicação web simples.",
+    "nav.start": "Início",
     "controls.preferences": "Preferências do site",
     "linkedin.aria": "Acessar perfil profissional no LinkedIn"
   },
@@ -57,6 +58,7 @@ const translations = {
     "humhub.description": "Self-hosting a web application on a LAMP stack.",
     "website.title": "Static Website and Digital Presence",
     "website.description": "Digital presence through a static page, visual organization and lightweight web publishing.",
+    "nav.start": "Home",
     "controls.preferences": "Site preferences",
     "linkedin.aria": "Open professional LinkedIn profile"
   }

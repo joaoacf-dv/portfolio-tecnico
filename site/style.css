@@ -851,6 +851,14 @@ html[data-theme="dark"] code {
   margin-left: auto;
 }
 
+.topnav__inner--controls-only {
+  justify-content: flex-end;
+}
+
+.topnav__inner--controls-only .site-controls {
+  margin-left: auto;
+}
+
 @media (max-width: 720px) {
   .topnav__inner {
     min-height: auto;
@@ -909,6 +917,16 @@ html[data-theme="dark"] code {
     min-width: 2.15rem;
     height: 2.1rem;
     padding: 0 0.58rem;
+  }
+
+  .topnav__inner--controls-only {
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.9rem 0;
+  }
+
+  .topnav__inner--controls-only .site-controls {
+    margin-left: auto;
   }
 
   .site-controls {
