@@ -1,22 +1,23 @@
-# Site Estático do Portfólio
+# Site do Portfólio Técnico
 
-Esta pasta contém a versão web do portfólio técnico, estruturada para apresentação pública dos projetos, trilhas de competência e cases aplicados.
+Esta pasta contém a versão web do portfólio, estruturada para apresentar projetos, cases, trilhas técnicas e ilustrações contextualizadas.
 
-## Conteúdo
+## Estrutura
 
-- Página inicial do portfólio.
-- Índice de cases técnicos.
-- Páginas individuais para cada projeto.
-- Estilos e scripts locais, sem dependências externas.
+- `index.html`: página inicial do portfólio.
+- `cases/`: páginas individuais dos cases.
+- `assets/cases/`: imagens e ilustrações técnicas dos projetos.
+- `style.css`: estilos do site.
+- `script.js`: navegação e componentes interativos.
 
-## Objetivo
+## Ilustrações Técnicas
 
-Apresentar de forma visual, direta e profissional as competências demonstradas nos projetos: infraestrutura, automação, suporte técnico, observabilidade, integração de sistemas, containers, bots e desenvolvimento aplicado.
+Os cases possuem estrutura preparada para exibir imagens, diagramas e registros visuais públicos. As galerias são exibidas apenas quando houver imagens válidas configuradas.
 
 ## Publicação
 
-A pasta `site/` pode ser utilizada como base para GitHub Pages ou para qualquer hospedagem estática simples.
+A pasta `site/` está preparada para publicação estática, incluindo GitHub Pages.
 
-## Curadoria
+## Padrão Visual
 
-O conteúdo foi organizado para leitura pública, preservando clareza técnica, segurança da informação e foco na demonstração de capacidade prática.
+O site prioriza leitura clara, navegação simples, organização técnica e apresentação profissional.

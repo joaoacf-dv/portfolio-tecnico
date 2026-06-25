@@ -1,6 +1,8 @@
 # Laboratório WSL2, Ubuntu e Docker
 
-Tipo de apresentação: Laboratório técnico  
+## Categoria
+
+Laboratório Técnico
 
 ## Visão Geral
 
@@ -12,9 +14,9 @@ Era necessário estruturar um ambiente híbrido para rodar serviços Linux em ho
 
 ## Solução Desenvolvida
 
-O laboratório foi organizado em torno do WSL2 com Ubuntu como base de execução, combinando Docker, Compose, banco MySQL e procedimentos de diagnóstico. O material foi mantido como laboratório técnico de leitura pública, sem tratar o ambiente como produção.
+O laboratório foi organizado em torno do WSL2 com Ubuntu como base de execução, combinando Docker Compose, banco MySQL e procedimentos de diagnóstico para testes locais reproduzíveis.
 
-## Stack Principal
+## Stack Técnica
 
 - WSL2
 - Ubuntu
@@ -22,7 +24,10 @@ O laboratório foi organizado em torno do WSL2 com Ubuntu como base de execuçã
 - Docker Compose
 - MySQL
 - Shell Linux
-- Serviço analítico provável
+
+## Arquitetura / Fluxo
+
+Windows → WSL2/Ubuntu → Docker Compose → containers e banco de dados.
 
 ## Entregas Técnicas
 
@@ -40,13 +45,15 @@ O laboratório foi organizado em torno do WSL2 com Ubuntu como base de execuçã
 - Configuração de serviços locais.
 - Documentação técnica orientada a laboratório.
 
-## Curadoria Pública
+## Ilustrações Técnicas
 
-O conteúdo foi apresentado como laboratório técnico, com anonimização de URLs, caminhos, endereços e demais referências específicas do ambiente de origem.
+A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
 
 ## Resultado Técnico
 
 O case demonstra capacidade de preparar e manter um laboratório funcional com containers em WSL2, com foco em configuração, validação e diagnóstico.
 
+## Evolução
 
-
+- Automatizar a preparação do ambiente.
+- Expandir os cenários de containers e redes.

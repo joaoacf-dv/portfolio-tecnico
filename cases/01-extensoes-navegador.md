@@ -1,6 +1,8 @@
 # Extensões de Navegador
 
-Tipo de apresentação: Case técnico  
+## Categoria
+
+Desenvolvimento de Sistemas
 
 ## Visão Geral
 
@@ -14,7 +16,7 @@ O projeto parte de problemas recorrentes de navegação: exposição visual de i
 
 Foi estruturado um conjunto de extensões independentes, com manifests separados, popup dedicado, scripts de conteúdo, service workers e persistência local. A frente mais representativa é a extensão de privacidade visual para interfaces web, com blur seletivo, bloqueio local, configurações persistidas e menu flutuante dentro da página.
 
-## Stack Principal
+## Stack Técnica
 
 - JavaScript
 - HTML
@@ -24,6 +26,10 @@ Foi estruturado um conjunto de extensões independentes, com manifests separados
 - `chrome.storage`
 - Content scripts
 - Service worker
+
+## Arquitetura / Fluxo
+
+Interface do navegador → scripts de conteúdo → regras da extensão → persistência local.
 
 ## Entregas Técnicas
 
@@ -41,13 +47,15 @@ Foi estruturado um conjunto de extensões independentes, com manifests separados
 - Organização modular de frontend.
 - UX aplicada a privacidade e produtividade.
 
-## Curadoria Pública
+## Ilustrações Técnicas
 
-Case apresentado com material curado e anonimizado, sem credenciais, evidências reais, caminhos locais ou referências institucionais.
+A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
 
 ## Resultado Técnico
 
 O material demonstra uma base técnica consistente para desenvolvimento de extensões de navegador voltadas a problemas concretos de privacidade visual e produtividade local.
 
+## Evolução
 
-
+- Ampliar os controles de configuração.
+- Adicionar testes automatizados dos principais fluxos.

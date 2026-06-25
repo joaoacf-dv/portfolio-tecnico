@@ -1,14 +1,16 @@
-# Índice de Cases
+# Índice de Cases Técnicos
 
-| Case | Área técnica | Stack principal | Tipo de apresentação | Observação |
-|---|---|---|---|---|
-| [01-extensoes-navegador.md](./01-extensoes-navegador.md) | Desenvolvimento aplicado | JavaScript, HTML, CSS, Manifest V3 | Case técnico | Coleção de extensões com foco em produtividade local, privacidade visual e controle de interface. |
-| [02-wsl-ubuntu-docker-lab.md](./02-wsl-ubuntu-docker-lab.md) | Ambientes e containers | WSL2, Ubuntu, Docker, MySQL | Laboratório técnico | Laboratório documentado para containers, banco de dados e serviços Linux em host Windows. |
-| [03-programa-suporte-tecnico.md](./03-programa-suporte-tecnico.md) | Automação de suporte | Python, Tkinter, PowerShell | Case narrativo | Aplicação desktop de padronização operacional com automação local de suporte. |
-| [04-sistema-controle-processos-relatorios.md](./04-sistema-controle-processos-relatorios.md) | Dados e automação administrativa | Python, MySQL, SQL, VBA, Excel | Case técnico | Projeto de controle documental com persistência relacional e geração de relatórios. |
-| [05-windows-server-corporativo.md](./05-windows-server-corporativo.md) | Infraestrutura | Windows Server, Active Directory, DNS, DHCP, GPO | Case narrativo | Ambiente fictício de infraestrutura Microsoft organizado para apresentação profissional. |
-| [06-chatwoot-ia-omnichannel.md](./06-chatwoot-ia-omnichannel.md) | Integrações e atendimento | Chatwoot, Docker, PostgreSQL, Flask | Case arquitetural | Arquitetura de atendimento omnichannel apresentada com foco em integração e automação. |
-| [07-observabilidade-zabbix-grafana.md](./07-observabilidade-zabbix-grafana.md) | Observabilidade | Zabbix, Grafana, Telegram | Case narrativo | Trilha de monitoramento, dashboards e alertas com narrativa técnica objetiva. |
-| [08-telegram-bot.md](./08-telegram-bot.md) | Bots e automação | Python, python-telegram-bot | Microcase | Bot conversacional com handlers, menus e estrutura extensível. |
-| [09-humhub-self-hosting.md](./09-humhub-self-hosting.md) | Self-hosting web | HumHub, Apache, PHP, MariaDB | Microcase | Implantação de aplicação web self-hosted em stack LAMP. |
-| [10-site-estatico-presenca-digital.md](./10-site-estatico-presenca-digital.md) | Publicação web | Carrd, Ereemby, HTML estático | Microcase | Estruturação de presença digital com página estática e curadoria visual. |
+Os cases abaixo organizam os principais projetos, laboratórios e estudos aplicados do portfólio, com foco em infraestrutura de TI, automação operacional, desenvolvimento de sistemas, integração de soluções, observabilidade e suporte técnico.
+
+| Nº | Case | Categoria | Stack principal |
+| -- | ---- | --------- | --------------- |
+| 01 | [Extensões de Navegador](./01-extensoes-navegador.md) | Desenvolvimento de Sistemas | JavaScript, HTML, CSS, Manifest V3 |
+| 02 | [Laboratório WSL2, Ubuntu e Docker](./02-wsl-ubuntu-docker-lab.md) | Laboratório Técnico | WSL2, Ubuntu, Docker, MySQL |
+| 03 | [Programa de Suporte Técnico](./03-programa-suporte-tecnico.md) | Automação de Suporte | Python, Tkinter, PowerShell |
+| 04 | [Sistema de Controle de Processos e Relatórios](./04-sistema-controle-processos-relatorios.md) | Automação de Processos | Python, MySQL, SQL, VBA, Excel |
+| 05 | [Ambiente Windows Server Corporativo](./05-windows-server-corporativo.md) | Infraestrutura Corporativa | Windows Server, Active Directory, DNS, DHCP, GPO |
+| 06 | [Chatwoot com IA e Atendimento Omnichannel](./06-chatwoot-ia-omnichannel.md) | Integração de Sistemas | Chatwoot, Docker, PostgreSQL, Flask |
+| 07 | [Observabilidade com Zabbix e Grafana](./07-observabilidade-zabbix-grafana.md) | Observabilidade | Zabbix, Grafana, Telegram |
+| 08 | [Telegram Bot](./08-telegram-bot.md) | Bot e Automação | Python, python-telegram-bot |
+| 09 | [HumHub Self-hosting](./09-humhub-self-hosting.md) | Self-hosting | HumHub, Apache, PHP, MariaDB |
+| 10 | [Site Estático e Presença Digital](./10-site-estatico-presenca-digital.md) | Presença Digital | HTML estático, publicação web |

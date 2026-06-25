@@ -1,10 +1,12 @@
 # Site Estático e Presença Digital
 
-Tipo de apresentação: Microcase
+## Categoria
+
+Presença Digital
 
 ## Visão Geral
 
-Microcase de estruturação de presença digital com página estática, organização visual e publicação web simples.
+Estruturação de presença digital com página estática, organização visual e publicação web simples.
 
 ## Desafio Técnico
 
@@ -14,13 +16,17 @@ Era necessário criar uma presença digital enxuta, apresentável e de rápida p
 
 A solução utiliza ferramentas leves de página estática e organização visual para construir uma apresentação profissional com foco em clareza, navegação simples e entrega rápida. O trabalho demonstra curadoria de conteúdo, escolha adequada de ferramenta e capacidade de transformar informações soltas em uma página pública estruturada.
 
-## Stack Principal
+## Stack Técnica
 
 - Carrd
 - Ereemby
 - HTML estático
 - Publicação web
 - Organização visual
+
+## Arquitetura / Fluxo
+
+Conteúdo estruturado → página estática → hospedagem web → acesso público.
 
 ## Entregas Técnicas
 
@@ -38,10 +44,15 @@ A solução utiliza ferramentas leves de página estática e organização visua
 - Clareza de apresentação.
 - Uso de ferramentas leves para entrega rápida.
 
-## Curadoria Pública
+## Ilustrações Técnicas
 
-O microcase apresenta apenas a estrutura e a abordagem técnica da publicação, sem expor arquivos originais, links internos, dados reais ou materiais privados.
+A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
 
 ## Resultado Técnico
 
-O resultado demonstra capacidade de organizar e publicar uma presença digital simples, segura e funcional, com foco em apresentação profissional e entrega objetiva.
+O resultado demonstra capacidade de organizar e publicar uma presença digital funcional, com navegação clara e apresentação profissional.
+
+## Evolução
+
+- Ampliar acessibilidade e desempenho.
+- Evoluir o conteúdo com novos projetos e ilustrações.

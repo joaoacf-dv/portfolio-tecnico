@@ -1,6 +1,8 @@
 # Programa de Suporte Técnico
 
-Tipo de apresentação: Case narrativo  
+## Categoria
+
+Automação de Suporte
 
 ## Visão Geral
 
@@ -12,9 +14,9 @@ Rotinas recorrentes de suporte estavam dispersas entre scripts, atalhos e proced
 
 ## Solução Desenvolvida
 
-O projeto combina um launcher em Python com interface Tkinter, scripts PowerShell por categoria, recursos auxiliares e etapas de empacotamento com PyInstaller. A apresentação pública foi mantida em formato narrativo, focando na arquitetura do fluxo e não em artefatos operacionais.
+O projeto combina um launcher em Python com interface Tkinter, scripts PowerShell organizados por categoria, recursos auxiliares e empacotamento com PyInstaller.
 
-## Stack Principal
+## Stack Técnica
 
 - Python
 - Tkinter
@@ -22,7 +24,10 @@ O projeto combina um launcher em Python com interface Tkinter, scripts PowerShel
 - PowerShell
 - PyInstaller
 - Chocolatey
-- Empacotamento MSI provável
+
+## Arquitetura / Fluxo
+
+Interface Tkinter → seleção da rotina → execução Python/PowerShell → retorno ao operador.
 
 ## Entregas Técnicas
 
@@ -40,13 +45,15 @@ O projeto combina um launcher em Python com interface Tkinter, scripts PowerShel
 - Organização operacional por menus e scripts.
 - Empacotamento e documentação técnica.
 
-## Curadoria Pública
+## Ilustrações Técnicas
 
-O case foi publicado sem binários, instaladores, logs, referências reais de ambiente ou detalhes operacionais sensíveis. O foco público está na solução técnica e na padronização do fluxo.
+A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
 
 ## Resultado Técnico
 
 O material evidencia uma abordagem prática para transformar rotinas repetitivas de suporte em um fluxo centralizado, reutilizável e mais previsível.
 
+## Evolução
 
-
+- Adicionar registro estruturado das execuções.
+- Ampliar a validação de permissões e pré-requisitos.

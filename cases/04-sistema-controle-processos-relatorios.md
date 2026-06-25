@@ -1,6 +1,8 @@
 # Sistema de Controle de Processos e Relatórios
 
-Tipo de apresentação: Case técnico  
+## Categoria
+
+Automação de Processos
 
 ## Visão Geral
 
@@ -14,7 +16,7 @@ Havia necessidade de organizar documentos por processo, tipo, categoria, atribui
 
 O projeto foi estruturado com schema SQL dedicado, tabela principal de documentos, índices para busca e filtros, scripts Python para operações de CRUD e rotinas de relatório, além de apoio adicional em planilha e macros VBA quando útil ao fluxo administrativo.
 
-## Stack Principal
+## Stack Técnica
 
 - Python
 - MySQL
@@ -23,6 +25,10 @@ O projeto foi estruturado com schema SQL dedicado, tabela principal de documento
 - `pandas`
 - VBA
 - Excel
+
+## Arquitetura / Fluxo
+
+Entrada de dados → validação em Python → persistência MySQL → consultas e relatórios.
 
 ## Entregas Técnicas
 
@@ -40,13 +46,15 @@ O projeto foi estruturado com schema SQL dedicado, tabela principal de documento
 - Integração entre banco, planilha e macros.
 - Organização de fluxo documental.
 
-## Curadoria Pública
+## Ilustrações Técnicas
 
-Credenciais, nomes reais, dados de planilha e identificadores operacionais foram removidos ou substituídos por placeholders. O case preserva o conteúdo técnico em formato adequado para leitura pública e avaliação profissional.
+A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
 
 ## Resultado Técnico
 
-O material demonstra uma implementação coerente de automação administrativa com persistência relacional e consolidação de relatórios, adequada para portfólio aplicado.
+O material demonstra automação de processos com persistência relacional, operações estruturadas e consolidação de relatórios.
 
+## Evolução
 
-
+- Criar interface unificada para consulta e operação.
+- Adicionar controle de acesso e histórico de alterações.

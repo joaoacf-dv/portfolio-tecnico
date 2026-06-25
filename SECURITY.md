@@ -1,26 +1,19 @@
 # Segurança e Curadoria
 
-Este repositório contém uma versão pública e curada de projetos técnicos organizados para apresentação profissional.
+Este repositório contém uma versão pública e organizada de projetos técnicos voltados à apresentação profissional.
 
-## Curadoria aplicada
+## Escopo
 
-O conteúdo foi revisado para preservar o valor técnico dos projetos sem expor informações sensíveis, ambientes reais, credenciais, registros internos ou artefatos operacionais.
+O conteúdo publicado concentra-se em arquitetura, raciocínio técnico, estrutura de solução, stack utilizada e resultados demonstrados.
 
-## Escopo público
+## Curadoria
 
-A versão publicada concentra-se em:
+Os projetos foram organizados para leitura pública, com foco em clareza técnica, responsabilidade na apresentação e preservação de informações sensíveis.
 
-- arquitetura das soluções;
-- organização técnica;
-- competências demonstradas;
-- decisões de implementação;
-- stack utilizada;
-- resultados técnicos documentados.
+## Fora do Escopo
 
-## Itens fora do escopo público
+Não fazem parte deste repositório credenciais, tokens, logs, binários, instaladores, dados reais, evidências operacionais, arquivos internos ou configurações de ambiente real.
 
-Materiais privados, arquivos internos, credenciais, logs, evidências reais, binários, instaladores e dados operacionais não fazem parte deste repositório.
+## Ilustrações
 
-## Objetivo
-
-Permitir avaliação técnica clara e segura, demonstrando capacidade prática em infraestrutura, automação, suporte, observabilidade, integração de sistemas e desenvolvimento aplicado.
+Imagens utilizadas nos cases devem ser públicas, sanitizadas e contextualizadas. Não devem conter dados sensíveis, identificadores reais, IPs, domínios internos, usuários, tokens, logs ou evidências operacionais.

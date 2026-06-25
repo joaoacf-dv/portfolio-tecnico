@@ -1,10 +1,12 @@
 # Observabilidade com Zabbix e Grafana
 
-Tipo de apresentação: Case narrativo  
+## Categoria
+
+Observabilidade
 
 ## Visão Geral
 
-Case narrativo de monitoramento e visualização com Zabbix, Grafana e integração de alertas, apresentado em nível sanitizado e anônimo.
+Solução de monitoramento e visualização com Zabbix, Grafana e integração de alertas para apoio à operação técnica.
 
 ## Desafio Técnico
 
@@ -12,9 +14,9 @@ O cenário exige consolidar coleta, visualização e alerta em uma base de obser
 
 ## Solução Desenvolvida
 
-O case combina Zabbix como plataforma de monitoramento, Grafana como camada de dashboards e scripts de apoio para integrações e operação. A publicação foi estruturada em formato narrativo, reduzindo a exposição a um fluxo técnico reutilizável e seguro.
+A solução combina Zabbix como plataforma de monitoramento, Grafana como camada de dashboards e scripts de apoio para integrações e operação.
 
-## Stack Principal
+## Stack Técnica
 
 - Zabbix
 - Grafana
@@ -23,6 +25,10 @@ O case combina Zabbix como plataforma de monitoramento, Grafana como camada de d
 - Python
 - PowerShell
 - Bash
+
+## Arquitetura / Fluxo
+
+Hosts e serviços → coleta Zabbix → dashboards Grafana → alertas e notificações.
 
 ## Entregas Técnicas
 
@@ -40,13 +46,15 @@ O case combina Zabbix como plataforma de monitoramento, Grafana como camada de d
 - Organização de documentação operacional.
 - Consolidação de dashboards e notificações.
 
-## Curadoria Pública
+## Ilustrações Técnicas
 
-O case não inclui hosts reais, painéis reais, imagens operacionais, endereços ou grupos internos. A narrativa foi reduzida ao fluxo técnico anonimizado e adequado à avaliação pública.
+A versão web deste case já possui galeria visual ativa para documentação contextual de dashboards, alertas e fluxo de observabilidade. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
 
 ## Resultado Técnico
 
-O material comprova uma base prática de observabilidade com componentes de coleta, visualização e alerta, adequada para avaliação técnica e apresentação profissional.
+O material demonstra uma base integrada de observabilidade com coleta, visualização e alertas voltados à resposta operacional.
 
+## Evolução
 
-
+- Ampliar correlação de eventos e indicadores.
+- Adicionar novos painéis e regras de escalonamento.

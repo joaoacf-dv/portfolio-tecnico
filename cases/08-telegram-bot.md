@@ -1,10 +1,12 @@
 # Telegram Bot
 
-Tipo de apresentação: Microcase  
+## Categoria
+
+Bot e Automação
 
 ## Visão Geral
 
-Microcase de bot em Python com comandos, menus, handlers e fluxo conversacional, voltado a demonstrar automação simples em canal Telegram.
+Bot em Python com comandos, menus, handlers e fluxo conversacional para automação em canal Telegram.
 
 ## Desafio Técnico
 
@@ -14,12 +16,16 @@ O objetivo técnico era estruturar um bot leve, com navegação por comandos e b
 
 O projeto usa `python-telegram-bot` para registrar comandos, processar callbacks de botões e responder ao usuário com menus definidos por função. A estrutura favorece expansão gradual do fluxo e separação clara entre entrada, roteamento e resposta.
 
-## Stack Principal
+## Stack Técnica
 
 - Python
 - `python-telegram-bot`
 - Logging
 - Handlers assíncronos
+
+## Arquitetura / Fluxo
+
+Mensagem do usuário → handler → regra do comando → resposta ou menu.
 
 ## Entregas Técnicas
 
@@ -36,13 +42,15 @@ O projeto usa `python-telegram-bot` para registrar comandos, processar callbacks
 - Uso de handlers e callbacks.
 - Organização de comandos e respostas.
 
-## Curadoria Pública
+## Ilustrações Técnicas
 
-O microcase foi publicado sem credenciais, identificadores, integrações sensíveis ou dados operacionais. O foco está apenas na estrutura técnica do bot.
+A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
 
 ## Resultado Técnico
 
-O material demonstra uma base funcional para bots simples e extensíveis no Telegram, adequada como microcase de automação conversacional.
+O material demonstra uma base funcional e extensível para automação conversacional no Telegram.
 
+## Evolução
 
-
+- Integrar persistência de dados.
+- Ampliar comandos, validações e tratamento de erros.
