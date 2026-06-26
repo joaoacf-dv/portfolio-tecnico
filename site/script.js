@@ -31,6 +31,8 @@ const translations = {
     "website.description": "Presença digital com página estática, organização visual e publicação web simples.",
     "nav.start": "Início",
     "controls.preferences": "Preferências do site",
+    "hero.linkedin": "LinkedIn",
+    "hero.linkedin.aria": "Acessar perfil profissional no LinkedIn",
     "linkedin.aria": "Acessar perfil profissional no LinkedIn"
   },
   "en-US": {
@@ -60,6 +62,8 @@ const translations = {
     "website.description": "Digital presence through a static page, visual organization and lightweight web publishing.",
     "nav.start": "Home",
     "controls.preferences": "Site preferences",
+    "hero.linkedin": "LinkedIn",
+    "hero.linkedin.aria": "Open professional LinkedIn profile",
     "linkedin.aria": "Open professional LinkedIn profile"
   }
 };
@@ -169,10 +173,10 @@ const ptToEn = {
   "Solução Desenvolvida": "Developed Solution",
   "Arquitetura / Fluxo": "Architecture / Flow",
   "Ilustrações Técnicas": "Technical Illustrations",
+  "Ilustrações": "Illustrations",
   "Registros visuais, diagramas ou representações técnicas utilizados para contextualizar a arquitetura, o fluxo e os resultados do projeto.": "Visual records, diagrams or technical representations used to contextualize the architecture, flow and results of the project.",
   "Entregas Técnicas": "Technical Deliverables",
   "Competências Demonstradas": "Demonstrated Skills",
-  "Curadoria Pública": "Public Curation",
   "Resultado Técnico": "Technical Result",
   "Este case foi reorganizado para apresentação pública, preservando a arquitetura, as decisões técnicas e o valor demonstrativo da solução. Informações sensíveis, identificadores reais e artefatos operacionais não fazem parte da versão pública.": "This case was organized for public presentation while preserving the architecture, technical decisions and demonstrative value of the solution. Sensitive information, real identifiers and operational artifacts are not included in the public version.",
   "Coleção de extensões Chrome com foco em privacidade visual, produtividade local e organização da navegação.": "A collection of Chrome extensions focused on visual privacy, local productivity and browsing organization.",
@@ -293,7 +297,7 @@ const ptToEn = {
   "Integração entre plataforma de atendimento e automação.": "Integration between the support platform and automation.",
   "Curadoria técnica para publicação pública segura.": "Technical curation for responsible public presentation.",
   "O material demonstra entendimento consistente de integração omnichannel e automação de resposta, preservando a segurança da publicação sem perder clareza técnica.": "The material demonstrates a consistent understanding of omnichannel integration and response automation while maintaining technical clarity in the public presentation.",
-  "Base técnica de monitoramento, dashboards e alertas apresentada com curadoria pública segura.": "Technical foundation for monitoring, dashboards and alerts presented in a responsible public format.",
+  "Base técnica de monitoramento, dashboards e alertas apresentada em formato público seguro.": "Technical foundation for monitoring, dashboards and alerts presented in a responsible public format.",
   "O case consolida uma trilha de observabilidade com coleta, visualização e notificação, preservando apenas a camada técnica reutilizável da solução.": "The case consolidates an observability workflow for collection, visualization and notification while preserving the reusable technical layer of the solution.",
   "O desafio era organizar monitoramento de hosts, criação de dashboards e regras de alerta em uma base coesa, capaz de apoiar operação técnica sem expor o ambiente monitorado.": "The challenge was to organize host monitoring, dashboard creation and alert rules into a cohesive foundation that supports technical operations.",
   "A solução combina Zabbix como plataforma de monitoramento, Grafana como camada de visualização e integrações auxiliares para notificação. A apresentação pública foi mantida em formato técnico e anonimizado.": "The solution combines Zabbix as the monitoring platform, Grafana as the visualization layer and supporting integrations for notifications. The public presentation remains technical and anonymized.",
@@ -589,6 +593,37 @@ function updateGalleryLabels() {
     const index = Number(dot.dataset.galleryIndex || "0") + 1;
     dot.setAttribute("aria-label", isEnglish ? `Go to image ${index}` : `Ir para imagem ${index}`);
   });
+
+  document.querySelectorAll(".gallery-rail__button").forEach((button) => {
+    const index = Number(button.dataset.galleryIndex || "0") + 1;
+    const title = isEnglish && button.dataset.galleryTitleEn
+      ? button.dataset.galleryTitleEn
+      : button.dataset.galleryTitle || `${isEnglish ? "Image" : "Imagem"} ${index}`;
+    button.dataset.galleryLabel = title;
+    button.textContent = title;
+    button.setAttribute("aria-label", isEnglish ? `Show ${title}` : `Exibir ${title}`);
+    button.setAttribute("title", title);
+  });
+}
+
+function getGallerySlideTitle(slide, index, language = currentLanguage) {
+  const fallback = language === "en-US" ? `Image ${index + 1}` : `Imagem ${index + 1}`;
+  return language === "en-US" && slide.dataset.galleryTitleEn
+    ? slide.dataset.galleryTitleEn
+    : slide.dataset.galleryTitle || fallback;
+}
+
+function getGalleryGroupTitle(group, language = currentLanguage) {
+  return language === "en-US" && group.titleEn ? group.titleEn : group.title;
+}
+
+function revealRailTemporarily(rail) {
+  if (!rail) return;
+  rail.classList.add("is-open");
+  window.clearTimeout(rail._hideTimer);
+  rail._hideTimer = window.setTimeout(() => {
+    rail.classList.remove("is-open");
+  }, 2600);
 }
 
 async function initCaseGalleries() {
@@ -610,6 +645,10 @@ async function initCaseGalleries() {
     const previousButton = section.querySelector("[data-gallery-prev]");
     const nextButton = section.querySelector("[data-gallery-next]");
     const dotsContainer = section.querySelector("[data-gallery-dots]");
+    const railContainer = section.dataset.galleryLayout === "with-rail"
+      ? section.querySelector("[data-gallery-rail]")
+      : null;
+    const railElement = railContainer?.closest(".gallery-rail") || null;
     const slides = [...section.querySelectorAll(".gallery-slide")];
 
     if (!gallery || !track || !slides.length) {
@@ -639,10 +678,49 @@ async function initCaseGalleries() {
 
     let activeIndex = 0;
     let autoplayId = null;
+    let railButtons = [];
+
+    if (railContainer) {
+      railContainer.textContent = "";
+      const groups = [];
+      validSlides.forEach((slide, index) => {
+        const key = slide.dataset.galleryGroup || `slide-${index}`;
+        if (groups.some((group) => group.key === key)) return;
+
+        const title = slide.dataset.galleryGroupTitle || slide.dataset.galleryTitle || `Imagem ${index + 1}`;
+        const titleEn = slide.dataset.galleryGroupTitleEn || slide.dataset.galleryTitleEn || title;
+        groups.push({ key, title, titleEn, firstSlideIndex: index });
+      });
+
+      railButtons = groups.map((group) => {
+        const title = getGalleryGroupTitle(group);
+        const button = document.createElement("button");
+        button.className = "gallery-rail__button";
+        button.type = "button";
+        button.dataset.galleryGroup = group.key;
+        button.dataset.galleryIndex = String(group.firstSlideIndex);
+        button.dataset.galleryTitle = group.title;
+        button.dataset.galleryTitleEn = group.titleEn;
+        button.dataset.galleryLabel = title;
+        button.textContent = title;
+        button.setAttribute("aria-label", currentLanguage === "en-US" ? `Show ${title}` : `Exibir ${title}`);
+        button.setAttribute("title", title);
+        button.addEventListener("click", () => {
+          showSlide(group.firstSlideIndex);
+          restartAutoplay();
+          revealRailTemporarily(railElement);
+        });
+        railContainer.appendChild(button);
+        return button;
+      });
+    }
 
     if (validSlides.length === 1) {
       validSlides[0].classList.add("is-active");
+      railButtons[0]?.classList.add("is-active");
+      railButtons[0]?.setAttribute("aria-current", "true");
       controls?.classList.add("is-hidden");
+      updateGalleryLabels();
       return;
     }
 
@@ -669,6 +747,12 @@ async function initCaseGalleries() {
         const isActive = index === activeIndex;
         dot.classList.toggle("is-active", isActive);
         dot.setAttribute("aria-current", isActive ? "true" : "false");
+      });
+      const activeGroup = validSlides[activeIndex]?.dataset.galleryGroup || `slide-${activeIndex}`;
+      railButtons.forEach((button) => {
+        const isActive = button.dataset.galleryGroup === activeGroup;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-current", isActive ? "true" : "false");
       });
     }
 

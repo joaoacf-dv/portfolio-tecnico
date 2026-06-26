@@ -69,48 +69,55 @@
             </div>
           </section>
 
-          <section class="case-section case-gallery-section" data-gallery-active="true">
+          <section class="case-section case-gallery-section" data-gallery-active="true" data-gallery-layout="with-rail">
             <h2>Ilustrações Técnicas</h2>
             <p>
               Registros visuais, diagramas ou representações técnicas utilizados para contextualizar
               a arquitetura, o fluxo e os resultados do projeto.
             </p>
 
-            <div class="case-gallery" data-gallery>
-
-              <div class="gallery-track">
-                <figure class="gallery-slide is-active">
+            <div class="case-gallery case-gallery--with-rail" data-gallery>
+              <div class="case-gallery__layout">
+                <div class="gallery-main">
+                  <div class="gallery-track">
+                <figure class="gallery-slide is-active" data-gallery-title="WhatsApp Privacy Shield" data-gallery-title-en="WhatsApp Privacy Shield" data-gallery-group="whatsapp-privacy" data-gallery-group-title="WhatsApp Privacy Shield" data-gallery-group-title-en="WhatsApp Privacy Shield">
                   <img src="../assets/cases/extensoes-navegador/whatsapp-privacy-shield-configuracoes-01.webp" alt="Painel de configurações da extensão de privacidade para WhatsApp Web com opções de proteção, senha local, bloqueio automático e controle de intensidade do borrão">
                   <figcaption>Painel de configurações da extensão com proteção geral, senha local, bloqueio por inatividade e ajuste personalizado da intensidade do borrão.</figcaption>
                 </figure>
 
-                <figure class="gallery-slide">
+                <figure class="gallery-slide" data-gallery-title="Privacidade Local" data-gallery-title-en="Local Privacy" data-gallery-group="whatsapp-privacy" data-gallery-group-title="WhatsApp Privacy Shield" data-gallery-group-title-en="WhatsApp Privacy Shield">
                   <img src="../assets/cases/extensoes-navegador/whatsapp-privacy-shield-configuracoes-0102.webp" alt="Painel de configurações da extensão de privacidade para WhatsApp Web com opções de proteção, senha local, bloqueio automático e controle de intensidade do borrão">
                   <figcaption>Painel de configurações da extensão com proteção geral, senha local, bloqueio por inatividade e ajuste personalizado da intensidade do borrão.</figcaption>
                 </figure>
 
-                <figure class="gallery-slide">
+                <figure class="gallery-slide" data-gallery-title="Gerenciador de Acessos" data-gallery-title-en="Access Manager" data-gallery-group="access-manager" data-gallery-group-title="Gerenciador de Acessos" data-gallery-group-title-en="Access Manager">
                   <img src="../assets/cases/extensoes-navegador/gerenciador-sites-acessos-01.webp" alt="Interface de extensão de navegador para organização de sites, atalhos, categorias, favoritos, anotações, lembretes e gerenciamento de credenciais locais">
                   <figcaption>Extensão de navegador para centralização de acessos, organização por categorias, favoritos, anotações, lembretes e gerenciamento local de credenciais.</figcaption>
                 </figure>
 
-                <figure class="gallery-slide">
+                <figure class="gallery-slide" data-gallery-title="Loki Auto Refresh" data-gallery-title-en="Loki Auto Refresh" data-gallery-group="loki-auto-refresh" data-gallery-group-title="Loki Auto Refresh" data-gallery-group-title-en="Loki Auto Refresh">
                   <img src="../assets/cases/extensoes-navegador/loki-auto-refresh-limpeza-dados-01.webp" alt="Interface da extensão Loki para atualização automática de abas, seleção de intervalo em segundos, minutos ou horas e limpeza de cache, cookies e armazenamento local">
                   <figcaption>Extensão Loki para atualização automática de páginas, controle de temporizadores por aba ou domínio e limpeza rápida de cache, cookies e dados locais do navegador.</figcaption>
                 </figure>
 
-                <figure class="gallery-slide">
+                <figure class="gallery-slide" data-gallery-title="Controle Rápido" data-gallery-title-en="Quick Control" data-gallery-group="quick-control" data-gallery-group-title="Controle Rápido" data-gallery-group-title-en="Quick Control">
                   <img src="../assets/cases/extensoes-navegador/controle-rapido-bloqueio-abas-notas-01.webp" alt="Interface de extensão de navegador para controle rápido com atalhos de teclado, bloqueio de abas por senha, botão flutuante, realce de texto e notas fixas">
                   <figcaption>Extensão de controle rápido para navegador, reunindo atalhos de teclado, bloqueio de abas por senha, botão flutuante, realce de texto e notas fixas na página.</figcaption>
                 </figure>
 
+                  </div>
+                </div>
 
-              </div>
+                <aside class="gallery-rail" aria-label="Navegação por ilustração">
+                  <div class="gallery-rail__title" data-i18n="Ilustrações">Ilustrações</div>
+                  <div class="gallery-rail__list" data-gallery-rail></div>
+                </aside>
 
-              <div class="gallery-controls" aria-label="Controles da galeria">
+                <div class="gallery-controls" aria-label="Controles da galeria">
                 <button class="gallery-button" type="button" data-gallery-prev aria-label="Imagem anterior">‹</button>
                 <div class="gallery-dots" data-gallery-dots></div>
                 <button class="gallery-button" type="button" data-gallery-next aria-label="Próxima imagem">›</button>
+                </div>
               </div>
             </div>
           </section>
@@ -138,11 +145,6 @@
           </section>
 
           <section class="case-section">
-            <h2>Curadoria Pública</h2>
-            <div class="safety-note"><p>Este case foi reorganizado para apresentação pública, preservando a arquitetura, as decisões técnicas e o valor demonstrativo da solução. Informações sensíveis, identificadores reais e artefatos operacionais não fazem parte da versão pública.</p></div>
-          </section>
-
-          <section class="case-section">
             <h2>Resultado Técnico</h2>
             <p>O conjunto comprova capacidade de construir extensões de navegador úteis, modulares e alinhadas a problemas reais de privacidade visual e produtividade local.</p>
           </section>
@@ -153,13 +155,12 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <a class="footer-social-link" href="https://www.linkedin.com/in/joaoacf-dv" target="_blank" rel="noopener noreferrer" aria-label="Acessar perfil profissional no LinkedIn" data-i18n-aria-label="linkedin.aria">
+      <a class="footer-social-link footer-social-link--icon-only" href="https://www.linkedin.com/in/joaoacf-dv" target="_blank" rel="noopener noreferrer" aria-label="Acessar perfil profissional no LinkedIn" data-i18n-aria-label="linkedin.aria">
         <span class="footer-social-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" role="img" focusable="false">
             <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.83v2.18h.05c.53-1.01 1.84-2.08 3.79-2.08C19.72 8.1 20.5 10.77 20.5 14.23V24h-4v-8.65c0-2.06-.04-4.71-2.87-4.71-2.88 0-3.32 2.25-3.32 4.56V24h-4V8z"/>
           </svg>
         </span>
-        <span class="footer-social-text">LinkedIn</span>
       </a>
     </div>
   </footer>
