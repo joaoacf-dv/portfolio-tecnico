@@ -626,6 +626,206 @@ function revealRailTemporarily(rail) {
   }, 2600);
 }
 
+function initAmbientNetwork() {
+  if (document.querySelector(".ambient-network")) return;
+
+  const canvas = document.createElement("canvas");
+  canvas.className = "ambient-network";
+  canvas.setAttribute("aria-hidden", "true");
+  document.body.prepend(canvas);
+
+  const ctx = canvas.getContext("2d");
+  if (!ctx) {
+    canvas.remove();
+    return;
+  }
+
+  const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const pointer = { x: 0, y: 0, active: false };
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let points = [];
+  let animationId = 0;
+  let scrollInfluence = window.scrollY || 0;
+  let lastFrame = 0;
+
+  function getPointCount() {
+    if (width < 560) return 22;
+    if (width < 960) return 36;
+    return 52;
+  }
+
+  function getColors() {
+    const isDark = document.documentElement.dataset.theme === "dark";
+    return isDark
+      ? {
+          line: "rgba(210, 245, 238, 0.16)",
+          point: "rgba(120, 214, 201, 0.42)",
+          accent: "rgba(244, 240, 232, 0.35)"
+        }
+      : {
+          line: "rgba(12, 92, 85, 0.13)",
+          point: "rgba(12, 92, 85, 0.28)",
+          accent: "rgba(164, 101, 45, 0.22)"
+        };
+  }
+
+  function createPoints() {
+    const count = getPointCount();
+    points = Array.from({ length: count }, (_, index) => {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = 0.06 + Math.random() * 0.14;
+      return {
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        radius: index % 7 === 0 ? 1.8 : 1.15 + Math.random() * 0.9,
+        accent: index % 8 === 0
+      };
+    });
+  }
+
+  function resize() {
+    width = window.innerWidth || document.documentElement.clientWidth || 1;
+    height = window.innerHeight || document.documentElement.clientHeight || 1;
+    dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    canvas.width = Math.ceil(width * dpr);
+    canvas.height = Math.ceil(height * dpr);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    createPoints();
+    draw(0, true);
+  }
+
+  function updatePoints(delta) {
+    const scrollShift = (scrollInfluence % Math.max(height, 1)) * 0.0008;
+
+    points.forEach((point) => {
+      point.x += point.vx * delta;
+      point.y += (point.vy + scrollShift) * delta;
+
+      if (pointer.active) {
+        const dx = point.x - pointer.x;
+        const dy = point.y - pointer.y;
+        const distance = Math.hypot(dx, dy);
+        const range = width < 720 ? 95 : 135;
+
+        if (distance > 0 && distance < range) {
+          const force = (1 - distance / range) * 0.22;
+          point.x += (dx / distance) * force * delta;
+          point.y += (dy / distance) * force * delta;
+        }
+      }
+
+      if (point.x < -20) point.x = width + 20;
+      if (point.x > width + 20) point.x = -20;
+      if (point.y < -20) point.y = height + 20;
+      if (point.y > height + 20) point.y = -20;
+    });
+  }
+
+  function drawConnections(colors) {
+    const maxDistance = width < 720 ? 118 : 155;
+
+    for (let i = 0; i < points.length; i += 1) {
+      for (let j = i + 1; j < points.length; j += 1) {
+        const a = points[i];
+        const b = points[j];
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        const distance = Math.hypot(dx, dy);
+        if (distance > maxDistance) continue;
+
+        ctx.globalAlpha = (1 - distance / maxDistance) * 0.72;
+        ctx.strokeStyle = colors.line;
+        ctx.lineWidth = 0.65;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+    }
+
+    ctx.globalAlpha = 1;
+  }
+
+  function drawPoints(colors) {
+    points.forEach((point) => {
+      ctx.fillStyle = point.accent ? colors.accent : colors.point;
+      ctx.beginPath();
+      ctx.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
+
+  function draw(timestamp = 0, staticFrame = false) {
+    const delta = Math.min((timestamp - lastFrame) / 16.67 || 1, 2.4);
+    lastFrame = timestamp;
+
+    if (!staticFrame && !motionQuery.matches) updatePoints(delta);
+
+    ctx.clearRect(0, 0, width, height);
+    const colors = getColors();
+    drawConnections(colors);
+    drawPoints(colors);
+  }
+
+  function animate(timestamp) {
+    draw(timestamp);
+    animationId = window.requestAnimationFrame(animate);
+  }
+
+  function start() {
+    if (motionQuery.matches || animationId || document.hidden) return;
+    lastFrame = performance.now();
+    animationId = window.requestAnimationFrame(animate);
+  }
+
+  function stop() {
+    if (!animationId) return;
+    window.cancelAnimationFrame(animationId);
+    animationId = 0;
+  }
+
+  window.addEventListener("resize", resize, { passive: true });
+  window.addEventListener("pointermove", (event) => {
+    pointer.x = event.clientX;
+    pointer.y = event.clientY;
+    pointer.active = true;
+  }, { passive: true });
+  window.addEventListener("pointerleave", () => {
+    pointer.active = false;
+  }, { passive: true });
+  window.addEventListener("pointercancel", () => {
+    pointer.active = false;
+  }, { passive: true });
+  window.addEventListener("scroll", () => {
+    scrollInfluence = window.scrollY || 0;
+  }, { passive: true });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stop();
+    } else {
+      draw(0, true);
+      start();
+    }
+  });
+
+  motionQuery.addEventListener?.("change", () => {
+    stop();
+    draw(0, true);
+    start();
+  });
+
+  resize();
+  draw(0, true);
+  start();
+}
+
 async function initCaseGalleries() {
   const gallerySections = [...document.querySelectorAll(".case-gallery-section")];
   if (!gallerySections.length) return;
@@ -795,6 +995,7 @@ async function initCaseGalleries() {
 
 function initSite() {
   initThemeToggle();
+  initAmbientNetwork();
   initLanguageToggle();
   initMenu();
   initSectionHighlight();
