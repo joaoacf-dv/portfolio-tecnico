@@ -1,20 +1,22 @@
 # Laboratório WSL2, Ubuntu e Docker
 
+> Estudo técnico complementar mantido como base de evolução do portfólio.
+
 ## Categoria
 
-Laboratório Técnico
+Linux, Ubuntu e Containers
 
 ## Visão Geral
 
-Laboratório técnico documentado para execução de serviços Linux em Windows usando WSL2, Ubuntu, Docker, Docker Compose, MySQL e ferramentas auxiliares em ambiente local.
+Laboratório técnico para execução de serviços Linux em ambiente Windows com WSL2, Ubuntu e Docker.
 
 ## Desafio Técnico
 
-Era necessário estruturar um ambiente híbrido para rodar serviços Linux em host Windows com previsibilidade, capacidade de teste local e troubleshooting de instalação, containers e banco de dados.
+Criar uma base local para instalar, testar e diagnosticar serviços Linux sem depender de infraestrutura externa.
 
 ## Solução Desenvolvida
 
-O laboratório foi organizado em torno do WSL2 com Ubuntu como base de execução, combinando Docker Compose, banco MySQL e procedimentos de diagnóstico para testes locais reproduzíveis.
+Foi estruturado um ambiente híbrido com host Windows, distribuição Ubuntu em WSL2 e containers Docker para serviços locais, validação de portas, banco de dados e fluxos de troubleshooting.
 
 ## Stack Técnica
 
@@ -23,37 +25,35 @@ O laboratório foi organizado em torno do WSL2 com Ubuntu como base de execuçã
 - Docker
 - Docker Compose
 - MySQL
-- Shell Linux
 
 ## Arquitetura / Fluxo
 
-Windows → WSL2/Ubuntu → Docker Compose → containers e banco de dados.
-
-## Entregas Técnicas
-
-- Preparação de ambiente Linux em host Windows.
-- Organização de serviços em containers.
-- Registro de troubleshooting de instalação e dependências.
-- Base documentada para testes locais e reprodução do ambiente.
-- Fluxo técnico para subir, validar e ajustar serviços.
-
-## Competências Demonstradas
-
-- Administração de ambiente híbrido Windows/Linux.
-- Orquestração básica com Docker Compose.
-- Troubleshooting de instalação e dependências.
-- Configuração de serviços locais.
-- Documentação técnica orientada a laboratório.
+Host Windows -> WSL2/Ubuntu -> Docker Compose -> Containers de serviço -> Banco e validação local.
 
 ## Ilustrações Técnicas
 
-A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
+A versão web possui estrutura preparada para ilustrações técnicas futuras, sem exibir seção vazia ao visitante.
+
+## Entregas Técnicas
+
+- Preparação de ambiente Linux local.
+- Execução de serviços em containers.
+- Validação de conectividade e portas.
+- Base documentada para novos laboratórios.
+- Fluxo de inicialização e diagnóstico.
+
+## Competências Demonstradas
+
+- Operação híbrida Windows/Linux.
+- Uso de Docker e Docker Compose.
+- Diagnóstico de serviços locais.
+- Organização de laboratório técnico.
+- Documentação de ambiente reproduzível.
 
 ## Resultado Técnico
 
-O case demonstra capacidade de preparar e manter um laboratório funcional com containers em WSL2, com foco em configuração, validação e diagnóstico.
+O estudo estabelece uma base funcional para testar serviços em containers usando WSL2 e Ubuntu.
 
 ## Evolução
 
-- Automatizar a preparação do ambiente.
-- Expandir os cenários de containers e redes.
+Reapresentar o estudo como projeto completo, com catálogo de serviços, ilustrações técnicas e documentação visual ampliada.

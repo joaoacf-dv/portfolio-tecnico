@@ -6,15 +6,15 @@ Infraestrutura Microsoft
 
 ## Visão Geral
 
-Arquitetura de infraestrutura Microsoft com rede interna, Active Directory, DNS, DHCP, GPO, VPN, IIS, WSUS, SNMP e serviços de apoio.
+Ambiente corporativo baseado em Windows Server para centralizar autenticação, serviços de rede, políticas e administração de estações.
 
 ## Desafio Técnico
 
-O cenário exige estruturar uma base de infraestrutura Windows Server capaz de centralizar autenticação, serviços de rede, políticas de acesso e padronização operacional para clientes Windows.
+Ambientes Windows precisam de controle centralizado para usuários, nomes, endereçamento, políticas e acesso a recursos. O desafio foi organizar esses componentes em uma arquitetura coerente de domínio.
 
 ## Solução Desenvolvida
 
-A solução parte de uma rede interna com endereçamento controlado, promoção de servidor para controlador de domínio, configuração de DNS e DHCP, ingresso de clientes e aplicação de políticas via GPO. Serviços adicionais incluem IIS, VPN, atualização e monitoramento de apoio.
+Foi implantado um servidor central com Active Directory, DNS, DHCP, políticas de grupo, armazenamento e validação de estação ingressada ao domínio.
 
 ## Stack Técnica
 
@@ -22,41 +22,37 @@ A solução parte de uma rede interna com endereçamento controlado, promoção 
 - Active Directory
 - DNS
 - DHCP
-- Group Policy
-- VPN
-- IIS
-- WSUS
-- SNMP
+- GPO
+- Cliente Windows em domínio
 
 ## Arquitetura / Fluxo
 
-Clientes Windows → serviços de domínio → DNS/DHCP → políticas GPO → serviços corporativos.
-
-## Entregas Técnicas
-
-- Estrutura de domínio centralizado.
-- Serviços de nomes e distribuição de endereços.
-- Políticas de grupo para padronização.
-- Base para acesso remoto e serviços web.
-- Organização técnica de implantação e operação.
-
-## Competências Demonstradas
-
-- Administração de domínio Windows.
-- Planejamento de rede interna.
-- Governança por GPO.
-- Configuração de serviços de infraestrutura.
-- Documentação de ambiente e sequência de implantação.
+Clientes Windows -> Servidor central -> Active Directory -> DNS e DHCP -> GPO e serviços de apoio -> Administração contínua.
 
 ## Ilustrações Técnicas
 
-A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
+A versão web deste case possui galeria de ilustrações técnicas com Server Manager, AD DS, DNS, armazenamento, GPO e ingresso de estação no domínio.
+
+## Entregas Técnicas
+
+- Controlador de domínio central.
+- Serviços de nomes e endereçamento.
+- Políticas de grupo para padronização.
+- Estrutura de administração e recursos.
+- Sequência documentada de implantação e operação.
+
+## Competências Demonstradas
+
+- Administração de domínio Microsoft.
+- Planejamento de serviços de rede.
+- Governança por políticas de grupo.
+- Organização de infraestrutura corporativa.
+- Documentação técnica de ambiente.
 
 ## Resultado Técnico
 
-O material demonstra domínio de serviços centrais de infraestrutura Microsoft e organização técnica de uma implantação corporativa.
+O projeto demonstra implantação e operação de componentes essenciais de infraestrutura Microsoft em cenário corporativo.
 
 ## Evolução
 
-- Incluir redundância para serviços críticos.
-- Ampliar políticas de segurança, backup e recuperação.
+Ampliar políticas, monitoramento, rotinas de backup e documentação de recuperação operacional.

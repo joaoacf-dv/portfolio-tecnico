@@ -6,56 +6,52 @@ Desenvolvimento de Sistemas e Extensões
 
 ## Visão Geral
 
-Coleção de extensões Chrome baseada em Manifest V3, com foco em privacidade visual, organização de abas, favoritos e produtividade local no navegador.
+Coleção de extensões para navegador com foco em privacidade visual, produtividade local e organização da navegação.
 
 ## Desafio Técnico
 
-O projeto parte de problemas recorrentes de navegação: exposição visual de informações em tela, excesso de abas abertas, necessidade de controles locais de produtividade e falta de ferramentas simples para ajustes rápidos na própria interface do navegador.
+Interfaces web podem expor informações na tela, acumular abas e exigir ajustes repetitivos de navegação. O desafio foi criar recursos locais, simples de acionar e independentes de backend.
 
 ## Solução Desenvolvida
 
-Foi estruturado um conjunto de extensões independentes, com manifests separados, popup dedicado, scripts de conteúdo, service workers e persistência local. A frente mais representativa é a extensão de privacidade visual para interfaces web, com blur seletivo, bloqueio local, configurações persistidas e menu flutuante dentro da página.
+Foram organizadas extensões independentes com popup, scripts de conteúdo, service workers e persistência local. As soluções incluem desfoque seletivo, travamento local, preferências salvas e ações rápidas sobre páginas abertas.
 
 ## Stack Técnica
 
 - JavaScript
 - HTML
 - CSS
-- Chrome Extensions Manifest V3
+- Manifest V3
 - Web Crypto API
-- `chrome.storage`
-- Content scripts
-- Service worker
 
 ## Arquitetura / Fluxo
 
-Interface do navegador → scripts de conteúdo → regras da extensão → persistência local.
-
-## Entregas Técnicas
-
-- Blur seletivo de elementos sensíveis na interface.
-- Persistência local de preferências de uso.
-- Estrutura modular para múltiplas extensões.
-- Menus e ações rápidas embutidas na página.
-- Recursos de organização de abas, destaque de texto e favoritos.
-
-## Competências Demonstradas
-
-- Desenvolvimento de extensões Chrome em Manifest V3.
-- Modelagem de estado local no cliente.
-- Manipulação de DOM em páginas de terceiros.
-- Organização modular de frontend.
-- UX aplicada a privacidade e produtividade.
+Usuário aciona extensão -> Popup ou atalho local -> Preferências no navegador -> Script de conteúdo aplica regras -> Interface recebe ajustes visuais.
 
 ## Ilustrações Técnicas
 
-A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
+A versão web deste case possui galeria de ilustrações técnicas com navegação contextual por extensão.
+
+## Entregas Técnicas
+
+- Desfoque seletivo de elementos da página.
+- Persistência local de preferências.
+- Menus e ações integradas ao navegador.
+- Estrutura modular para múltiplas extensões.
+- Recursos de organização de abas e favoritos.
+
+## Competências Demonstradas
+
+- Desenvolvimento com Chrome Manifest V3.
+- Manipulação de DOM em páginas existentes.
+- Gestão de estado local no navegador.
+- UX aplicada a privacidade visual e produtividade.
+- Organização modular de frontend.
 
 ## Resultado Técnico
 
-O material demonstra uma base técnica consistente para desenvolvimento de extensões de navegador voltadas a problemas concretos de privacidade visual e produtividade local.
+O conjunto demonstra domínio de extensões úteis para rotinas reais de navegação, com foco em execução local, interface simples e comportamento previsível.
 
 ## Evolução
 
-- Ampliar os controles de configuração.
-- Adicionar testes automatizados dos principais fluxos.
+Ampliar pacotes de extensão, automatizar empacotamento e documentar fluxos de uso por cenário.

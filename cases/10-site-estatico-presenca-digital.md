@@ -6,53 +6,52 @@ Presença Digital
 
 ## Visão Geral
 
-Estruturação de presença digital com página estática, organização visual e publicação web simples.
+Projeto de presença digital com página estática, curadoria visual e organização de conteúdo profissional para publicação web.
 
 ## Desafio Técnico
 
-Era necessário criar uma presença digital enxuta, apresentável e de rápida publicação, sem backend dedicado e sem dependência de infraestrutura complexa, mantendo separação entre conteúdo público e materiais privados.
+Uma presença pública precisa apresentar informações profissionais de forma clara, leve e controlada, sem expor detalhes internos ou excesso de complexidade.
 
 ## Solução Desenvolvida
 
-A solução utiliza ferramentas leves de página estática e organização visual para construir uma apresentação profissional com foco em clareza, navegação simples e entrega rápida. O trabalho demonstra curadoria de conteúdo, escolha adequada de ferramenta e capacidade de transformar informações soltas em uma página pública estruturada.
+Foi estruturada uma página estática com organização visual, separação entre conteúdo público e material interno, além de base para publicação e evolução de apresentação profissional.
 
 ## Stack Técnica
 
-- Carrd
-- Ereemby
 - HTML estático
 - Publicação web
 - Organização visual
+- Carrd
+- Ereemby
 
 ## Arquitetura / Fluxo
 
-Conteúdo estruturado → página estática → hospedagem web → acesso público.
-
-## Entregas Técnicas
-
-- Estrutura de página simples.
-- Organização visual de conteúdo profissional.
-- Publicação web leve.
-- Separação entre conteúdo público e material privado.
-- Base reutilizável para presença digital.
-
-## Competências Demonstradas
-
-- Curadoria de conteúdo público.
-- Estruturação de presença digital.
-- Publicação web simples.
-- Clareza de apresentação.
-- Uso de ferramentas leves para entrega rápida.
+Conteúdo profissional -> Curadoria visual -> Página estática -> Revisão pública -> Publicação web.
 
 ## Ilustrações Técnicas
 
-A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
+A versão web possui estrutura preparada para ilustrações técnicas futuras, sem exibir seção vazia ao visitante.
+
+## Entregas Técnicas
+
+- Estrutura simples de página pública.
+- Organização visual de informações.
+- Publicação web leve.
+- Separação entre conteúdo público e interno.
+- Base reutilizável para apresentação profissional.
+
+## Competências Demonstradas
+
+- Curadoria de conteúdo técnico.
+- Organização de presença digital.
+- Publicação estática.
+- Clareza de apresentação.
+- Controle de exposição pública.
 
 ## Resultado Técnico
 
-O resultado demonstra capacidade de organizar e publicar uma presença digital funcional, com navegação clara e apresentação profissional.
+O projeto demonstra uma presença digital simples, funcional e organizada para comunicação profissional.
 
 ## Evolução
 
-- Ampliar acessibilidade e desempenho.
-- Evoluir o conteúdo com novos projetos e ilustrações.
+Ampliar páginas de cases, enriquecer assets e revisar acessibilidade.

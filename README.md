@@ -23,11 +23,11 @@ Este portfólio reúne projetos, estudos aplicados e arquiteturas técnicas cons
 | 04 | [Extensões de Navegador](cases/01-extensoes-navegador.md) | Desenvolvimento de Sistemas e Extensões | JavaScript, HTML, CSS, Manifest V3 | Desenvolvimento de Sistemas e Extensões |
 | 05 | [Chatwoot com IA e Atendimento Omnichannel](cases/06-chatwoot-ia-omnichannel.md) | Integração de Sistemas e APIs | Chatwoot, Docker, PostgreSQL, Flask, bots | Integração de Sistemas e APIs |
 | 06 | [Telegram Bot](cases/08-telegram-bot.md) | Bot e Automação | Python, python-telegram-bot | Bot e Automação |
-| 07 | [Site Estático e Presença Digital](cases/10-site-estatico-presenca-digital.md) | Presença Digital | HTML estático, publicação web | Presença Digital |
+| 07 | [Site Estático e Presença Digital](cases/10-site-estatico-presenca-digital.md) | Presença Digital | HTML estático, publicação web, organização visual | Presença Digital |
 
 ## Projetos em evolução
 
-Alguns estudos técnicos de Linux, containers, automação de dados e self-hosting permanecem como base de evolução do portfólio e serão substituídos ou reapresentados futuramente por projetos mais completos e visualmente documentados.
+Alguns estudos técnicos de Linux, containers, automação de dados e self-hosting permanecem como base de evolução do portfólio e poderão ser reapresentados futuramente por projetos mais completos e visualmente documentados.
 
 ## Versão Web
 

@@ -6,55 +6,52 @@ Observabilidade e Monitoramento
 
 ## Visão Geral
 
-Solução de monitoramento e visualização com Zabbix, Grafana e integração de alertas para apoio à operação técnica.
+Ambiente de observabilidade para monitorar hosts, visualizar métricas e gerar alertas operacionais.
 
 ## Desafio Técnico
 
-O cenário exige consolidar coleta, visualização e alerta em uma base de observabilidade capaz de organizar hosts monitorados, dashboards operacionais e notificações para apoio à rotina técnica.
+Ambientes técnicos exigem visibilidade sobre disponibilidade, métricas, eventos e alertas. O desafio foi organizar coleta, visualização e notificação em um fluxo compreensível.
 
 ## Solução Desenvolvida
 
-A solução combina Zabbix como plataforma de monitoramento, Grafana como camada de dashboards e scripts de apoio para integrações e operação.
+Foi estruturado um ambiente com Zabbix para monitoramento, Grafana para visualização, regras de alerta e integração de notificações.
 
 ## Stack Técnica
 
 - Zabbix
 - Grafana
 - Telegram
-- JavaScript
 - Python
-- PowerShell
-- Bash
+- Dashboards
 
 ## Arquitetura / Fluxo
 
-Hosts e serviços → coleta Zabbix → dashboards Grafana → alertas e notificações.
+Hosts monitorados -> Zabbix -> Regras e triggers -> Grafana -> Alertas -> Operação técnica.
+
+## Ilustrações Técnicas
+
+A versão web deste case possui galeria de ilustrações técnicas com telas de monitoramento, dashboards e fluxo de alertas.
 
 ## Entregas Técnicas
 
-- Cadastro e organização de hosts monitorados.
-- Regras de alerta e notificação.
-- Dashboards para visualização de estado.
-- Integração com mensageria para avisos operacionais.
-- Scripts auxiliares de configuração e suporte.
+- Hosts monitorados.
+- Regras e triggers de alerta.
+- Dashboards operacionais.
+- Integração de notificações.
+- Scripts de apoio e documentação.
 
 ## Competências Demonstradas
 
 - Implantação de monitoramento.
-- Integração de camadas de observabilidade.
-- Configuração de alertas.
-- Organização de documentação operacional.
-- Consolidação de dashboards e notificações.
-
-## Ilustrações Técnicas
-
-A versão web deste case já possui galeria visual ativa para documentação contextual de dashboards, alertas e fluxo de observabilidade. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
+- Construção de camadas de observabilidade.
+- Definição de alertas.
+- Organização de dashboards.
+- Documentação de operação técnica.
 
 ## Resultado Técnico
 
-O material demonstra uma base integrada de observabilidade com coleta, visualização e alertas voltados à resposta operacional.
+O projeto demonstra monitoramento, visualização e alertas em uma base integrada de observabilidade.
 
 ## Evolução
 
-- Ampliar correlação de eventos e indicadores.
-- Adicionar novos painéis e regras de escalonamento.
+Adicionar mais templates, métricas customizadas, painéis por serviço e rotinas de resposta a incidentes.

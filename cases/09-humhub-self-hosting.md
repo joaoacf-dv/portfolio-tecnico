@@ -1,20 +1,22 @@
 # HumHub Self-hosting
 
+> Estudo técnico complementar mantido como base de evolução do portfólio.
+
 ## Categoria
 
-Self-hosting
+Implantação Web em Ambiente Linux
 
 ## Visão Geral
 
-Implantação de aplicação web self-hosted com HumHub, Apache, PHP e MariaDB sobre stack LAMP.
+Estudo de implantação self-hosted de aplicação web baseada em stack Linux, Apache, PHP e banco relacional.
 
 ## Desafio Técnico
 
-O cenário técnico envolve disponibilizar uma aplicação web self-hosted com os componentes essenciais de servidor web, PHP, banco relacional e rotinas básicas de operação e manutenção.
+Aplicações web self-hosted exigem preparação de servidor, configuração de serviços, permissões e manutenção básica.
 
 ## Solução Desenvolvida
 
-A solução organiza a atualização do sistema, instalação de Apache e PHP, configuração de extensões, preparação do MariaDB, criação do banco e publicação da aplicação com parâmetros de servidor definidos.
+Foi organizada uma base de instalação para HumHub em ambiente Linux com Apache, PHP, MariaDB e estrutura inicial de operação.
 
 ## Stack Técnica
 
@@ -22,36 +24,36 @@ A solução organiza a atualização do sistema, instalação de Apache e PHP, c
 - Apache
 - PHP
 - MariaDB
-- Cron
 - Linux
 
 ## Arquitetura / Fluxo
 
-Cliente web → Apache/PHP → HumHub → MariaDB → rotinas agendadas.
+Servidor Linux -> Apache/PHP -> MariaDB -> Aplicação HumHub -> Manutenção básica.
+
+## Ilustrações Técnicas
+
+A versão web possui estrutura preparada para ilustrações técnicas futuras, sem exibir seção vazia ao visitante.
 
 ## Entregas Técnicas
 
 - Preparação de stack LAMP.
-- Configuração de aplicação social self-hosted.
-- Organização de diretório web e permissões.
-- Base para manutenção e operação local.
+- Configuração inicial da aplicação.
+- Ajuste de diretórios e permissões.
+- Banco relacional para suporte à aplicação.
+- Base para manutenção operacional.
 
 ## Competências Demonstradas
 
-- Self-hosting de aplicação web.
-- Configuração de Apache e PHP.
+- Implantação self-hosted.
+- Configuração Apache/PHP.
 - Preparação de banco de dados.
-- Operação básica de serviço Linux.
-
-## Ilustrações Técnicas
-
-A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
+- Operação básica em Linux.
+- Documentação de instalação.
 
 ## Resultado Técnico
 
-O conteúdo demonstra capacidade de instalar, configurar e organizar uma aplicação web self-hosted em infraestrutura Linux.
+O estudo registra uma base de implantação web em ambiente Linux para aplicações self-hosted.
 
 ## Evolução
 
-- Automatizar instalação, atualização e backup.
-- Adicionar proxy reverso, HTTPS e monitoramento.
+Evoluir com hardening, backup, monitoramento e documentação visual do processo.

@@ -1,60 +1,59 @@
 # Sistema de Controle de Processos e Relatórios
 
+> Estudo técnico complementar mantido como base de evolução do portfólio.
+
 ## Categoria
 
-Automação de Processos
+Automação de Dados e Relatórios
 
 ## Visão Geral
 
-Projeto de automação administrativa voltado à gestão documental, com base relacional em MySQL, scripts Python para operações e apoio adicional em VBA e Excel.
+Estudo aplicado para controle de processos, organização de dados e geração de relatórios administrativos.
 
 ## Desafio Técnico
 
-Havia necessidade de organizar documentos por processo, tipo, categoria, atribuição e datas, com possibilidade de cadastro, consulta e geração de relatórios em uma base mais estruturada que planilhas isoladas.
+Dados operacionais podem ficar distribuídos em planilhas, consultas manuais e arquivos sem padronização. O desafio foi estruturar uma base para consolidar informações e gerar relatórios.
 
 ## Solução Desenvolvida
 
-O projeto foi estruturado com schema SQL dedicado, tabela principal de documentos, índices para busca e filtros, scripts Python para operações de CRUD e rotinas de relatório, além de apoio adicional em planilha e macros VBA quando útil ao fluxo administrativo.
+Foi planejado um fluxo com modelagem relacional, scripts Python, consultas SQL e apoio de Excel/VBA para relatórios e manipulação de dados.
 
 ## Stack Técnica
 
 - Python
 - MySQL
 - SQL
-- `mysql-connector`
-- `pandas`
 - VBA
 - Excel
 
 ## Arquitetura / Fluxo
 
-Entrada de dados → validação em Python → persistência MySQL → consultas e relatórios.
-
-## Entregas Técnicas
-
-- Modelagem de dados para controle documental.
-- Operações de cadastro, edição, consulta e remoção.
-- Índices para busca e filtragem.
-- Geração de relatórios consolidados.
-- Integração entre banco, scripts e ferramentas de escritório.
-
-## Competências Demonstradas
-
-- Modelagem relacional de dados.
-- Escrita de schema SQL e índices.
-- Automação administrativa com Python.
-- Integração entre banco, planilha e macros.
-- Organização de fluxo documental.
+Dados administrativos -> Banco relacional -> Scripts Python -> Consultas SQL -> Relatórios Excel/VBA.
 
 ## Ilustrações Técnicas
 
-A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
+A versão web possui estrutura preparada para ilustrações técnicas futuras, sem exibir seção vazia ao visitante.
+
+## Entregas Técnicas
+
+- Modelo relacional para controle de processos.
+- Scripts para manipulação de dados.
+- Consultas SQL estruturadas.
+- Geração de relatórios.
+- Apoio a fluxos em Excel.
+
+## Competências Demonstradas
+
+- Modelagem de dados.
+- Automação com Python.
+- Consultas SQL.
+- Relatórios administrativos.
+- Integração com Excel/VBA.
 
 ## Resultado Técnico
 
-O material demonstra automação de processos com persistência relacional, operações estruturadas e consolidação de relatórios.
+O estudo organiza uma base para automação administrativa e relatórios com dados estruturados.
 
 ## Evolução
 
-- Criar interface unificada para consulta e operação.
-- Adicionar controle de acesso e histórico de alterações.
+Evoluir para painel visual, importação e exportação automatizadas e documentação técnica com ilustrações.

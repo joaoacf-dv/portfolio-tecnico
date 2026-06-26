@@ -6,54 +6,52 @@ Scripting e Automação Operacional
 
 ## Visão Geral
 
-Aplicação desktop para suporte técnico em Windows, com interface em Python, scripts PowerShell organizados por categoria e fluxo de empacotamento para distribuição controlada.
+Aplicação desktop para centralizar rotinas de suporte Windows por meio de interface Python e automações locais.
 
 ## Desafio Técnico
 
-Rotinas recorrentes de suporte estavam dispersas entre scripts, atalhos e procedimentos manuais. Isso reduz padronização, dificulta uso por outros operadores e aumenta o tempo de execução de tarefas repetitivas.
+Rotinas de suporte costumam ficar dispersas em comandos, scripts e procedimentos manuais. O desafio foi reunir essas ações em uma ferramenta simples para execução assistida.
 
 ## Solução Desenvolvida
 
-O projeto combina um launcher em Python com interface Tkinter, scripts PowerShell organizados por categoria, recursos auxiliares e empacotamento com PyInstaller.
+Foi desenvolvido um launcher desktop com menus por categoria, interface em Tkinter, acionamento de scripts PowerShell e empacotamento para uso local controlado.
 
 ## Stack Técnica
 
 - Python
 - Tkinter
-- Pillow
 - PowerShell
 - PyInstaller
-- Chocolatey
+- Rotinas Windows
 
 ## Arquitetura / Fluxo
 
-Interface Tkinter → seleção da rotina → execução Python/PowerShell → retorno ao operador.
-
-## Entregas Técnicas
-
-- Menu centralizado para tarefas de suporte.
-- Separação de rotinas por categoria.
-- Acionamento de scripts administrativos e operacionais.
-- Base de recursos para instalação e manutenção.
-- Documentação de empacotamento para distribuição controlada.
-
-## Competências Demonstradas
-
-- Automação de suporte Windows.
-- Integração Python + PowerShell.
-- Projeto de interface desktop.
-- Organização operacional por menus e scripts.
-- Empacotamento e documentação técnica.
+Operador -> Launcher desktop -> Menus por categoria -> Scripts PowerShell -> Recursos de suporte -> Empacotamento controlado.
 
 ## Ilustrações Técnicas
 
-A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
+A versão web deste case possui galeria de ilustrações técnicas com telas do aplicativo e execução de rotinas de suporte.
+
+## Entregas Técnicas
+
+- Interface desktop para rotinas operacionais.
+- Organização de scripts por categoria.
+- Acionamento de comandos PowerShell.
+- Empacotamento para execução local.
+- Base extensível para novas tarefas.
+
+## Competências Demonstradas
+
+- Automação operacional com Python.
+- Integração entre interface desktop e scripts.
+- Organização de rotinas de suporte.
+- Empacotamento de aplicação local.
+- Padronização de ações repetitivas.
 
 ## Resultado Técnico
 
-O material evidencia uma abordagem prática para transformar rotinas repetitivas de suporte em um fluxo centralizado, reutilizável e mais previsível.
+O projeto reduz dispersão operacional e demonstra capacidade de transformar scripts em ferramenta prática de suporte.
 
 ## Evolução
 
-- Adicionar registro estruturado das execuções.
-- Ampliar a validação de permissões e pré-requisitos.
+Adicionar registro de execuções, perfis de operação, assinatura de pacote e novas rotinas de diagnóstico.

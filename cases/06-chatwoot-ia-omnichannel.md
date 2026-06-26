@@ -6,57 +6,53 @@ Integração de Sistemas e APIs
 
 ## Visão Geral
 
-Solução de atendimento omnichannel baseada em Chatwoot, integrações de mensageria e automação de respostas por serviço Python.
+Arquitetura de atendimento omnichannel baseada em Chatwoot, automações e serviços auxiliares para triagem e operação de suporte.
 
 ## Desafio Técnico
 
-O desafio consiste em centralizar mensagens de múltiplos canais, padronizar regras de atendimento e manter uma camada de automação integrada ao fluxo operacional.
+Equipes de atendimento precisam centralizar canais, organizar filas, aplicar regras de triagem e integrar respostas automáticas sem perder controle operacional.
 
 ## Solução Desenvolvida
 
-A solução combina Chatwoot como camada central de atendimento, serviços de mensageria, eventos de integração, categorização de mensagens e um agente em Flask responsável por responder em cenários definidos.
+Foi estruturado um ambiente com Chatwoot, containers, banco de dados, automações, webhooks e serviços auxiliares para integração com bots e fluxos de atendimento.
 
 ## Stack Técnica
 
 - Chatwoot
 - Docker
 - PostgreSQL
-- Redis
-- Rails
 - Flask
-- Twilio
-- Telegram
-- Serviços de mensageria
+- Bots
+- Webhooks
 
 ## Arquitetura / Fluxo
 
-Canais de atendimento → Chatwoot → regras de integração → serviço Flask → resposta ao canal.
-
-## Entregas Técnicas
-
-- Recebimento centralizado de mensagens.
-- Integração com múltiplos canais.
-- Camada de regras para automação de resposta.
-- Separação entre plataforma de atendimento e serviço auxiliar.
-- Estrutura arquitetural adequada para evolução controlada.
-
-## Competências Demonstradas
-
-- Desenho de integração omnichannel.
-- Modelagem de fluxos conversacionais.
-- Arquitetura de serviços web em containers.
-- Integração entre plataforma de atendimento e automação.
-- Curadoria técnica para publicação arquitetural.
+Canais de atendimento -> Chatwoot -> Regras e automações -> Serviços auxiliares -> Resposta ao usuário -> Operação e relatórios.
 
 ## Ilustrações Técnicas
 
-A versão web do portfólio possui estrutura preparada para ilustrações técnicas, diagramas e registros visuais contextualizados. As imagens devem ser públicas, sanitizadas e relacionadas ao fluxo técnico do projeto.
+A versão web deste case possui galeria de ilustrações técnicas com plataforma, caixas de entrada, conversas, contatos, relatórios e fluxo omnichannel.
+
+## Entregas Técnicas
+
+- Centralização de canais de atendimento.
+- Organização de equipes, caixas e contatos.
+- Camada de automação com webhooks.
+- Integração com serviços auxiliares.
+- Base para relatórios e acompanhamento operacional.
+
+## Competências Demonstradas
+
+- Integração omnichannel.
+- Arquitetura com containers.
+- Uso de APIs e webhooks.
+- Organização de plataforma de suporte.
+- Planejamento de fluxos com bots.
 
 ## Resultado Técnico
 
-O case demonstra integração omnichannel, separação de responsabilidades e automação controlada de respostas.
+O projeto demonstra integração de canais e automações em uma plataforma de atendimento preparada para operação técnica.
 
 ## Evolução
 
-- Ampliar regras de roteamento e classificação.
-- Adicionar métricas de atendimento e rastreabilidade.
+Expandir canais, registrar eventos, criar dashboards operacionais e aprimorar fluxos automatizados.

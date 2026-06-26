@@ -10,6 +10,12 @@ Os cases abaixo organizam os principais projetos e estudos aplicados do portfól
 | 04 | [Extensões de Navegador](./01-extensoes-navegador.md) | Desenvolvimento de Sistemas e Extensões | JavaScript, HTML, CSS, Manifest V3 |
 | 05 | [Chatwoot com IA e Atendimento Omnichannel](./06-chatwoot-ia-omnichannel.md) | Integração de Sistemas e APIs | Chatwoot, Docker, PostgreSQL, Flask, bots |
 | 06 | [Telegram Bot](./08-telegram-bot.md) | Bot e Automação | Python, python-telegram-bot |
-| 07 | [Site Estático e Presença Digital](./10-site-estatico-presenca-digital.md) | Presença Digital | HTML estático, publicação web |
+| 07 | [Site Estático e Presença Digital](./10-site-estatico-presenca-digital.md) | Presença Digital | HTML estático, publicação web, organização visual |
 
-Os domínios de Linux, containers, automação de dados e self-hosting permanecem como trilhas técnicas do portfólio, com evolução prevista para projetos futuros mais completos.
+## Estudos técnicos complementares
+
+- [Laboratório WSL2, Ubuntu e Docker](./02-wsl-ubuntu-docker-lab.md)
+- [Sistema de Controle de Processos e Relatórios](./04-sistema-controle-processos-relatorios.md)
+- [HumHub Self-hosting](./09-humhub-self-hosting.md)
+
+Esses estudos permanecem como base de evolução do portfólio e poderão ser reapresentados futuramente por projetos mais completos e visualmente documentados.
