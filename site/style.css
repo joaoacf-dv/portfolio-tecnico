@@ -1478,11 +1478,11 @@ html[data-theme="light"] .case-gallery--with-rail .gallery-rail__button::after {
 }
 
 html[data-theme="dark"] .ambient-network {
-  opacity: 0.2;
+  opacity: 0.6;
 }
 
 html[data-theme="light"] .ambient-network {
-  opacity: 0.12;
+  opacity: 0.7;
 }
 
 .topnav,
