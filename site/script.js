@@ -33,7 +33,12 @@ const translations = {
     "controls.preferences": "Preferências do site",
     "hero.linkedin": "LinkedIn",
     "hero.linkedin.aria": "Acessar perfil profissional no LinkedIn",
-    "linkedin.aria": "Acessar perfil profissional no LinkedIn"
+    "linkedin.aria": "Acessar perfil profissional no LinkedIn",
+    "lightbox.close": "Fechar imagem ampliada",
+    "lightbox.previous": "Imagem anterior",
+    "lightbox.next": "Próxima imagem",
+    "lightbox.label": "Visualização ampliada da imagem",
+    "backToTop.label": "Voltar ao topo"
   },
   "en-US": {
     "home.title": "Technical Portfolio - Infrastructure, Automation and Systems Development",
@@ -64,7 +69,12 @@ const translations = {
     "controls.preferences": "Site preferences",
     "hero.linkedin": "LinkedIn",
     "hero.linkedin.aria": "Open professional LinkedIn profile",
-    "linkedin.aria": "Open professional LinkedIn profile"
+    "linkedin.aria": "Open professional LinkedIn profile",
+    "lightbox.close": "Close enlarged image",
+    "lightbox.previous": "Previous image",
+    "lightbox.next": "Next image",
+    "lightbox.label": "Enlarged image view",
+    "backToTop.label": "Back to top"
   }
 };
 
@@ -505,6 +515,7 @@ function applyLanguage(language) {
   applyKeyedTranslations(currentLanguage);
   updateControlLabels();
   updateGalleryLabels();
+  updateLightboxLabels();
 }
 
 function applyTheme(theme) {
@@ -629,6 +640,155 @@ function updateGalleryLabels() {
     button.textContent = title;
     button.setAttribute("aria-label", isEnglish ? `Show ${title}` : `Exibir ${title}`);
     button.setAttribute("title", title);
+  });
+}
+
+function getTranslation(key) {
+  return translations[currentLanguage]?.[key] || translations[DEFAULT_LANGUAGE]?.[key] || key;
+}
+
+function updateLightboxLabels() {
+  const lightbox = document.querySelector("[data-lightbox]");
+  if (!lightbox) return;
+
+  lightbox.setAttribute("aria-label", getTranslation("lightbox.label"));
+  lightbox.querySelector("[data-lightbox-close]")?.setAttribute("aria-label", getTranslation("lightbox.close"));
+  lightbox.querySelector("[data-lightbox-prev]")?.setAttribute("aria-label", getTranslation("lightbox.previous"));
+  lightbox.querySelector("[data-lightbox-next]")?.setAttribute("aria-label", getTranslation("lightbox.next"));
+}
+
+function initGalleryLightbox() {
+  const galleryImages = [...document.querySelectorAll(".case-gallery .gallery-slide img")];
+  if (!galleryImages.length) return;
+
+  let lightbox = document.querySelector("[data-lightbox]");
+  if (!lightbox) {
+    lightbox = document.createElement("div");
+    lightbox.className = "image-lightbox";
+    lightbox.dataset.lightbox = "";
+    lightbox.hidden = true;
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.innerHTML = `
+      <button class="image-lightbox__close" type="button" data-lightbox-close>×</button>
+      <button class="image-lightbox__nav image-lightbox__nav--prev" type="button" data-lightbox-prev>‹</button>
+      <figure class="image-lightbox__figure">
+        <img class="image-lightbox__image" src="" alt="">
+        <figcaption class="image-lightbox__caption"></figcaption>
+      </figure>
+      <button class="image-lightbox__nav image-lightbox__nav--next" type="button" data-lightbox-next>›</button>
+    `;
+    document.body.appendChild(lightbox);
+  }
+
+  updateLightboxLabels();
+
+  const image = lightbox.querySelector(".image-lightbox__image");
+  const caption = lightbox.querySelector(".image-lightbox__caption");
+  const closeButton = lightbox.querySelector("[data-lightbox-close]");
+  const previousButton = lightbox.querySelector("[data-lightbox-prev]");
+  const nextButton = lightbox.querySelector("[data-lightbox-next]");
+  let activeItems = [];
+  let activeIndex = 0;
+  let previousFocus = null;
+
+  function getGalleryItems(gallery) {
+    return [...gallery.querySelectorAll(".gallery-slide")]
+      .map((slide, index) => {
+        const slideImage = slide.querySelector("img");
+        if (!slideImage || !slideImage.complete || slideImage.naturalWidth <= 0) return null;
+
+        return {
+          image: slideImage,
+          index,
+          src: slideImage.currentSrc || slideImage.getAttribute("src") || "",
+          alt: slideImage.getAttribute("alt") || "",
+          caption: normalizeText(slide.querySelector("figcaption")?.textContent || "")
+        };
+      })
+      .filter(Boolean);
+  }
+
+  function showLightboxImage(index) {
+    if (!activeItems.length) return;
+
+    activeIndex = (index + activeItems.length) % activeItems.length;
+    const item = activeItems[activeIndex];
+    image.setAttribute("src", item.src);
+    image.setAttribute("alt", item.alt);
+    caption.textContent = item.caption;
+
+    const hasMultipleImages = activeItems.length > 1;
+    previousButton.hidden = !hasMultipleImages;
+    nextButton.hidden = !hasMultipleImages;
+  }
+
+  function closeLightbox() {
+    if (lightbox.hidden) return;
+
+    lightbox.hidden = true;
+    lightbox.classList.remove("is-open");
+    document.body.classList.remove("lightbox-open");
+    document.dispatchEvent(new Event("portfolio:lightbox-toggle"));
+    image.removeAttribute("src");
+    image.setAttribute("alt", "");
+    caption.textContent = "";
+    activeItems = [];
+    previousFocus?.focus?.();
+    previousFocus = null;
+  }
+
+  function openLightbox(gallery, index) {
+    activeItems = getGalleryItems(gallery);
+    if (!activeItems.length) return;
+
+    activeIndex = Math.max(0, Math.min(index, activeItems.length - 1));
+    previousFocus = document.activeElement;
+    showLightboxImage(activeIndex);
+    lightbox.hidden = false;
+    lightbox.classList.add("is-open");
+    document.body.classList.add("lightbox-open");
+    document.dispatchEvent(new Event("portfolio:lightbox-toggle"));
+    closeButton.focus();
+  }
+
+  function showNextLightboxImage() {
+    showLightboxImage(activeIndex + 1);
+  }
+
+  function showPreviousLightboxImage() {
+    showLightboxImage(activeIndex - 1);
+  }
+
+  galleryImages.forEach((galleryImage) => {
+    if (galleryImage.dataset.lightboxBound === "true") return;
+
+    galleryImage.dataset.lightboxBound = "true";
+    galleryImage.addEventListener("click", () => {
+      const gallery = galleryImage.closest(".case-gallery");
+      if (!gallery) return;
+
+      const galleryItems = getGalleryItems(gallery);
+      const clickedIndex = galleryItems.findIndex((item) => item.image === galleryImage);
+      openLightbox(gallery, clickedIndex >= 0 ? clickedIndex : 0);
+    });
+  });
+
+  if (lightbox.dataset.lightboxInitialized === "true") return;
+  lightbox.dataset.lightboxInitialized = "true";
+
+  closeButton.addEventListener("click", closeLightbox);
+  previousButton.addEventListener("click", showPreviousLightboxImage);
+  nextButton.addEventListener("click", showNextLightboxImage);
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (lightbox.hidden) return;
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowRight") showNextLightboxImage();
+    if (event.key === "ArrowLeft") showPreviousLightboxImage();
   });
 }
 
@@ -1017,6 +1177,45 @@ async function initCaseGalleries() {
     updateGalleryLabels();
     startAutoplay();
   }));
+
+  initGalleryLightbox();
+}
+
+function initBackToTop() {
+  let button = document.querySelector("[data-back-to-top]");
+  if (!button) {
+    button = document.createElement("button");
+    button.className = "back-to-top";
+    button.type = "button";
+    button.dataset.backToTop = "";
+    button.dataset.i18nAriaLabel = "backToTop.label";
+    button.setAttribute("aria-label", getTranslation("backToTop.label"));
+    button.innerHTML = `
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 5.5 5.5 12l1.4 1.4L11 9.3V19h2V9.3l4.1 4.1 1.4-1.4L12 5.5z"/>
+      </svg>
+    `;
+    document.body.appendChild(button);
+  }
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function updateBackToTopVisibility() {
+    const shouldShow = window.scrollY > 420 && !document.body.classList.contains("lightbox-open");
+    button.classList.toggle("is-visible", shouldShow);
+  }
+
+  button.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: reducedMotion ? "auto" : "smooth"
+    });
+  });
+
+  window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+  window.addEventListener("resize", updateBackToTopVisibility, { passive: true });
+  document.addEventListener("portfolio:lightbox-toggle", updateBackToTopVisibility);
+  updateBackToTopVisibility();
 }
 
 function initSite() {
@@ -1026,6 +1225,7 @@ function initSite() {
   initMenu();
   initSectionHighlight();
   initCaseGalleries();
+  initBackToTop();
 }
 
 if (document.readyState === "loading") {
