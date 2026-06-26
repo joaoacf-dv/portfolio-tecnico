@@ -1776,3 +1776,62 @@ html[data-theme="light"] .ambient-network {
     opacity: 0.14;
   }
 }
+
+@media (max-width: 720px) {
+  .topnav--home .topnav__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    min-height: auto;
+    padding: 0.85rem 0;
+  }
+
+  .topnav--home .menu-toggle {
+    order: 1;
+    flex: 0 0 auto;
+    margin-right: auto;
+    height: 2.35rem;
+    padding: 0 0.9rem;
+  }
+
+  .topnav--home .site-controls {
+    order: 2;
+    flex: 0 0 auto;
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.45rem;
+  }
+
+  .topnav--home .topnav__links {
+    order: 3;
+    flex: 1 0 100%;
+    width: 100%;
+    margin-top: 0.65rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .topnav--home .topnav__inner {
+    gap: 0.5rem;
+  }
+
+  .topnav--home .menu-toggle {
+    height: 2.35rem;
+    padding: 0 0.9rem;
+  }
+
+  .topnav--home .control-button {
+    min-width: 2.25rem;
+    height: 2.25rem;
+    padding: 0 0.6rem;
+  }
+
+  .topnav--home .site-controls {
+    gap: 0.38rem;
+  }
+}
