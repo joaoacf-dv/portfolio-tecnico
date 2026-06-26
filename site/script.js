@@ -388,7 +388,27 @@ const ptToEn = {
   "Acessar perfil profissional no LinkedIn": "Open professional LinkedIn profile",
   "Representação visual de dashboard de observabilidade com Zabbix e Grafana": "Visual representation of an observability dashboard with Zabbix and Grafana",
   "Representação visual de alertas e eventos de monitoramento": "Visual representation of monitoring alerts and events",
-  "Representação visual do fluxo técnico entre monitoramento, dashboards e notificações": "Visual representation of the technical flow across monitoring, dashboards and notifications"
+  "Representação visual do fluxo técnico entre monitoramento, dashboards e notificações": "Visual representation of the technical flow across monitoring, dashboards and notifications",
+  "Painel do Gerenciador do Servidor exibindo visão geral do ambiente Windows Server": "Server Manager dashboard showing an overview of the Windows Server environment",
+  "Tela de servidor local no Gerenciador do Servidor com informações de configuração do Windows Server": "Local server screen in Server Manager with Windows Server configuration information",
+  "Gerenciador do Servidor exibindo todos os servidores administrados no ambiente": "Server Manager showing all servers managed in the environment",
+  "Visão geral dos Serviços de Domínio Active Directory no Gerenciador do Servidor": "Overview of Active Directory Domain Services in Server Manager",
+  "Visão geral do serviço DNS no ambiente Windows Server": "Overview of the DNS service in the Windows Server environment",
+  "Área de arquivos e serviços de armazenamento no Windows Server": "Files and storage services area in Windows Server",
+  "Editor ou console de registros DNS com zonas e entradas configuradas": "DNS record editor or console with configured zones and entries",
+  "Editor de Política de Grupo exibindo estrutura de configuração de GPO": "Group Policy Editor showing the GPO configuration structure",
+  "Tela de delegação de política de grupo no ambiente Windows Server": "Group Policy delegation screen in the Windows Server environment",
+  "Tela de ingresso concluído de cliente Windows ao domínio": "Completed Windows client domain join screen",
+  "Painel geral do Windows Server com visão consolidada das funções, serviços e estado operacional do ambiente.": "General Windows Server dashboard with a consolidated view of roles, services and operational status.",
+  "Visão do servidor local com informações de configuração, administração e parâmetros centrais do ambiente.": "Local server view with configuration, administration and core environment parameters.",
+  "Organização dos servidores administrados, permitindo acompanhamento centralizado da infraestrutura Microsoft.": "Organization of managed servers, enabling centralized monitoring of the Microsoft infrastructure.",
+  "Serviços de Domínio Active Directory organizados como base de identidade, autenticação e administração centralizada.": "Active Directory Domain Services organized as the foundation for identity, authentication and centralized administration.",
+  "Serviço DNS estruturado para resolução de nomes e suporte aos serviços de domínio do ambiente.": "DNS service structured for name resolution and support for domain services.",
+  "Camada de arquivos e armazenamento organizada como recurso de apoio à infraestrutura corporativa.": "File and storage layer organized as a support resource for the corporate infrastructure.",
+  "Estrutura de zonas e registros DNS utilizada para organização da resolução interna de nomes.": "DNS zone and record structure used to organize internal name resolution.",
+  "Estrutura de Política de Grupo utilizada para padronização, governança e aplicação de configurações no ambiente.": "Group Policy structure used for standardization, governance and configuration enforcement across the environment.",
+  "Delegação e controle de políticas de grupo, apoiando administração organizada e governança técnica.": "Delegation and control of Group Policies, supporting organized administration and technical governance.",
+  "Cliente Windows integrado ao domínio, validando a estrutura de autenticação centralizada.": "Windows client integrated into the domain, validating the centralized authentication structure."
 };
 
 const enToPt = Object.fromEntries(Object.entries(ptToEn).map(([pt, en]) => [en, pt]));
