@@ -30,15 +30,32 @@ const translations = {
     "website.title": "Site Estático e Presença Digital",
     "website.description": "Presença digital com página estática, organização visual e publicação web simples.",
     "nav.start": "Início",
+    "nav.overview": "Apresentação",
+    "nav.areas": "Áreas",
+    "nav.projects": "Projetos",
+    "nav.studies": "Estudos Técnicos",
+    "nav.tracks": "Trilhas",
     "controls.preferences": "Preferências do site",
     "hero.linkedin": "LinkedIn",
     "hero.linkedin.aria": "Acessar perfil profissional no LinkedIn",
+    "hero.viewProjects": "Ver projetos",
+    "hero.viewCases": "Ver todos os cases",
     "linkedin.aria": "Acessar perfil profissional no LinkedIn",
+    "case.backToCases": "Voltar aos cases",
+    "case.backToHome": "Voltar à página inicial",
+    "gallery.title": "Ilustrações Técnicas",
+    "gallery.description": "Registros visuais, diagramas ou representações técnicas utilizados para contextualizar a arquitetura, o fluxo e os resultados do projeto.",
+    "gallery.previous": "Imagem anterior",
+    "gallery.next": "Próxima imagem",
     "lightbox.close": "Fechar imagem ampliada",
     "lightbox.previous": "Imagem anterior",
     "lightbox.next": "Próxima imagem",
     "lightbox.label": "Visualização ampliada da imagem",
-    "backToTop.label": "Voltar ao topo"
+    "backToTop.label": "Voltar ao topo",
+    "theme.enableDark": "Ativar modo escuro",
+    "theme.enableLight": "Ativar modo claro",
+    "language.switchToEnglish": "Alternar idioma para inglês",
+    "language.switchToPortuguese": "Alternar idioma para português"
   },
   "en-US": {
     "home.title": "Technical Portfolio - Infrastructure, Automation and Systems Development",
@@ -66,15 +83,32 @@ const translations = {
     "website.title": "Static Website and Digital Presence",
     "website.description": "Digital presence through a static page, visual organization and lightweight web publishing.",
     "nav.start": "Home",
+    "nav.overview": "Overview",
+    "nav.areas": "Areas",
+    "nav.projects": "Projects",
+    "nav.studies": "Technical Studies",
+    "nav.tracks": "Tracks",
     "controls.preferences": "Site preferences",
     "hero.linkedin": "LinkedIn",
     "hero.linkedin.aria": "Open professional LinkedIn profile",
+    "hero.viewProjects": "View projects",
+    "hero.viewCases": "View all cases",
     "linkedin.aria": "Open professional LinkedIn profile",
+    "case.backToCases": "Back to cases",
+    "case.backToHome": "Back to home",
+    "gallery.title": "Technical Illustrations",
+    "gallery.description": "Visual records, diagrams or technical representations used to contextualize the architecture, flow and results of the project.",
+    "gallery.previous": "Previous image",
+    "gallery.next": "Next image",
     "lightbox.close": "Close enlarged image",
     "lightbox.previous": "Previous image",
     "lightbox.next": "Next image",
     "lightbox.label": "Enlarged image view",
-    "backToTop.label": "Back to top"
+    "backToTop.label": "Back to top",
+    "theme.enableDark": "Enable dark mode",
+    "theme.enableLight": "Enable light mode",
+    "language.switchToEnglish": "Switch language to English",
+    "language.switchToPortuguese": "Switch language to Portuguese"
   }
 };
 
@@ -392,6 +426,18 @@ const ptToEn = {
   "Uso de ferramentas leves para entrega rápida.": "Use of lightweight tools for rapid delivery.",
   "O estudo técnico apresenta apenas a estrutura e a abordagem técnica da publicação, sem expor arquivos originais, links internos, dados reais ou materiais privados.": "The technical study presents only the publishing structure and approach without exposing original files, internal links, real data or private material.",
   "O resultado demonstra capacidade de organizar e publicar uma presença digital simples, segura e funcional, com foco em apresentação profissional e entrega objetiva.": "The result demonstrates the ability to organize and publish a simple, responsible and functional digital presence focused on professional presentation and clear delivery.",
+  "O case apresenta uma infraestrutura Microsoft, cobrindo autenticação centralizada, serviços de rede, políticas de grupo e serviços de apoio para clientes Windows.": "The case presents a Microsoft infrastructure covering centralized authentication, network services, Group Policies and supporting services for Windows clients.",
+  "O ambiente foi reorganizado como narrativa técnica segura: rede controlada, promoção de servidor a controlador de domínio, configuração de DNS e DHCP, ingresso de clientes no domínio e aplicação de políticas via GPO, com serviços adicionais de apoio.": "The environment was organized as a secure technical narrative: controlled network, server promotion to domain controller, DNS and DHCP configuration, client domain join and Group Policy application, with additional supporting services.",
+  "O material demonstra domínio de tarefas de infraestrutura Microsoft e capacidade de organizar a implantação em uma narrativa segura e coerente.": "The material demonstrates command of Microsoft infrastructure tasks and the ability to organize the implementation into a secure and coherent narrative.",
+  "Painel de configurações da extensão com proteção geral, senha local, bloqueio por inatividade e ajuste personalizado da intensidade do borrão.": "Extension settings panel with general protection, local password, inactivity lock and custom blur intensity adjustment.",
+  "Extensão de navegador para centralização de acessos, organização por categorias, favoritos, anotações, lembretes e gerenciamento local de credenciais.": "Browser extension for centralized access, category organization, favorites, notes, reminders and local credential management.",
+  "Extensão Loki para atualização automática de páginas, controle de temporizadores por aba ou domínio e limpeza rápida de cache, cookies e dados locais do navegador.": "Loki extension for automatic page refresh, timer control by tab or domain and quick cleanup of cache, cookies and local browser data.",
+  "Extensão de controle rápido para navegador, reunindo atalhos de teclado, bloqueio de abas por senha, botão flutuante, realce de texto e notas fixas na página.": "Quick browser control extension combining keyboard shortcuts, password-protected tab locking, a floating button, text highlighting and sticky notes on the page.",
+  "Painel de configurações da extensão de privacidade para WhatsApp Web com opções de proteção, senha local, bloqueio automático e controle de intensidade do borrão": "Privacy extension settings panel for WhatsApp Web with protection options, local password, automatic lock and blur intensity control",
+  "Interface de extensão de navegador para organização de sites, atalhos, categorias, favoritos, anotações, lembretes e gerenciamento de credenciais locais": "Browser extension interface for organizing sites, shortcuts, categories, favorites, notes, reminders and local credential management",
+  "Interface da extensão Loki para atualização automática de abas, seleção de intervalo em segundos, minutos ou horas e limpeza de cache, cookies e armazenamento local": "Loki extension interface for automatic tab refresh, interval selection in seconds, minutes or hours and cleanup of cache, cookies and local storage",
+  "Interface de extensão de navegador para controle rápido com atalhos de teclado, bloqueio de abas por senha, botão flutuante, realce de texto e notas fixas": "Browser extension interface for quick control with keyboard shortcuts, password-protected tab locking, a floating button, text highlighting and sticky notes",
+  "Navegação por ilustração": "Illustration navigation",
   "Controles da galeria": "Gallery controls",
   "Imagem anterior": "Previous image",
   "Próxima imagem": "Next image",
@@ -483,27 +529,47 @@ function translateAttributes(language) {
 
 function applyKeyedTranslations(language) {
   const languageDictionary = translations[language];
+  const directDictionary = language === "en-US" ? ptToEn : enToPt;
+
+  function keyedValue(key) {
+    return languageDictionary?.[key] || directDictionary[key] || (language === "pt-BR" ? key : null);
+  }
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
-    const value = languageDictionary[key]
-      || (language === "en-US" ? ptToEn[key] : key);
+    const value = keyedValue(key);
     if (value) element.textContent = value;
   });
 
   document.querySelectorAll("[data-i18n-title]").forEach((element) => {
-    const value = languageDictionary[element.dataset.i18nTitle];
-    if (value) element.textContent = value;
+    const value = keyedValue(element.dataset.i18nTitle);
+    if (!value) return;
+
+    if (element.tagName === "TITLE") {
+      element.textContent = value;
+    } else {
+      element.setAttribute("title", value);
+    }
   });
 
   document.querySelectorAll("[data-i18n-meta-description]").forEach((element) => {
-    const value = languageDictionary[element.dataset.i18nMetaDescription];
+    const value = keyedValue(element.dataset.i18nMetaDescription);
     if (value) element.setAttribute("content", value);
   });
 
   document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
-    const value = languageDictionary[element.dataset.i18nAriaLabel];
+    const value = keyedValue(element.dataset.i18nAriaLabel);
     if (value) element.setAttribute("aria-label", value);
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+    const value = keyedValue(element.dataset.i18nAlt);
+    if (value) element.setAttribute("alt", value);
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    const value = keyedValue(element.dataset.i18nPlaceholder);
+    if (value) element.setAttribute("placeholder", value);
   });
 }
 
@@ -530,14 +596,14 @@ function updateControlLabels() {
 
   document.querySelectorAll("[data-language-toggle]").forEach((button) => {
     button.textContent = isEnglish ? "PT" : "EN";
-    button.setAttribute("aria-label", isEnglish ? "Switch language to Portuguese" : "Alternar idioma para inglês");
+    button.setAttribute("aria-label", isEnglish
+      ? getTranslation("language.switchToPortuguese")
+      : getTranslation("language.switchToEnglish"));
   });
 
   document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
     button.textContent = isDark ? "☀" : "☾";
-    const label = isEnglish
-      ? (isDark ? "Enable light mode" : "Enable dark mode")
-      : (isDark ? "Ativar modo claro" : "Ativar modo escuro");
+    const label = isDark ? getTranslation("theme.enableLight") : getTranslation("theme.enableDark");
     button.setAttribute("aria-label", label);
   });
 
@@ -669,14 +735,15 @@ function initGalleryLightbox() {
     lightbox.hidden = true;
     lightbox.setAttribute("role", "dialog");
     lightbox.setAttribute("aria-modal", "true");
+    lightbox.dataset.i18nAriaLabel = "lightbox.label";
     lightbox.innerHTML = `
-      <button class="image-lightbox__close" type="button" data-lightbox-close>×</button>
-      <button class="image-lightbox__nav image-lightbox__nav--prev" type="button" data-lightbox-prev>‹</button>
+      <button class="image-lightbox__close" type="button" data-lightbox-close data-i18n-aria-label="lightbox.close">×</button>
+      <button class="image-lightbox__nav image-lightbox__nav--prev" type="button" data-lightbox-prev data-i18n-aria-label="lightbox.previous">‹</button>
       <figure class="image-lightbox__figure">
         <img class="image-lightbox__image" src="" alt="">
         <figcaption class="image-lightbox__caption"></figcaption>
       </figure>
-      <button class="image-lightbox__nav image-lightbox__nav--next" type="button" data-lightbox-next>›</button>
+      <button class="image-lightbox__nav image-lightbox__nav--next" type="button" data-lightbox-next data-i18n-aria-label="lightbox.next">›</button>
     `;
     document.body.appendChild(lightbox);
   }
@@ -1197,6 +1264,8 @@ function initBackToTop() {
     `;
     document.body.appendChild(button);
   }
+
+  applyKeyedTranslations(currentLanguage);
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
