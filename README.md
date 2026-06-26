@@ -1,43 +1,39 @@
 # Portfólio Técnico — Infraestrutura, Automação e Desenvolvimento de Sistemas
 
-Este portfólio reúne projetos, estudos aplicados e arquiteturas técnicas construídas para demonstrar domínio prático em infraestrutura de TI, automação operacional, desenvolvimento de sistemas, integração de soluções, observabilidade e suporte técnico.
+Este portfólio reúne projetos, estudos aplicados e arquiteturas técnicas construídas para demonstrar domínio prático em infraestrutura de TI, automação operacional, desenvolvimento de sistemas, integração de soluções, observabilidade e operações de suporte.
 
 ## Áreas de Atuação
 
-- Infraestrutura Windows Server
-- Active Directory, DNS, DHCP e GPO
-- Observabilidade com Zabbix e Grafana
-- Automação com Python e PowerShell
-- Docker, WSL2 e Linux
-- Desenvolvimento de Sistemas
-- Desenvolvimento de Extensões
-- Dados, Relatórios e Automação
-- Integração de Sistemas
+- Infraestrutura Microsoft
+- Serviços de Domínio e Governança
+- Linux, Ubuntu e Containers
+- Scripting e Automação Operacional
+- Observabilidade e Monitoramento
+- Integração de Sistemas e APIs
+- Desenvolvimento de Sistemas e Extensões
+- Automação de Dados e Relatórios
 
 ## Cases Técnicos
 
 | Nº | Case | Área | Stack principal | Categoria |
 | -- | ---- | ---- | --------------- | --------- |
-| 01 | [Extensões de Navegador](cases/01-extensoes-navegador.md) | Desenvolvimento de Sistemas | JavaScript, HTML, CSS, Manifest V3 | Desenvolvimento de Sistemas |
-| 02 | [Laboratório WSL2, Ubuntu e Docker](cases/02-wsl-ubuntu-docker-lab.md) | Ambientes e containers | WSL2, Ubuntu, Docker, MySQL | Laboratório Técnico |
-| 03 | [Programa de Suporte Técnico](cases/03-programa-suporte-tecnico.md) | Automação de suporte | Python, Tkinter, PowerShell | Automação de Suporte |
-| 04 | [Sistema de Controle de Processos e Relatórios](cases/04-sistema-controle-processos-relatorios.md) | Dados e automação | Python, MySQL, SQL, VBA, Excel | Automação de Processos |
-| 05 | [Ambiente Windows Server Corporativo](cases/05-windows-server-corporativo.md) | Infraestrutura | Windows Server, Active Directory, DNS, DHCP, GPO | Infraestrutura Corporativa |
-| 06 | [Chatwoot com IA e Atendimento Omnichannel](cases/06-chatwoot-ia-omnichannel.md) | Integração de sistemas | Chatwoot, Docker, PostgreSQL, Flask | Integração de Sistemas |
-| 07 | [Observabilidade com Zabbix e Grafana](cases/07-observabilidade-zabbix-grafana.md) | Observabilidade | Zabbix, Grafana, Telegram | Observabilidade |
-| 08 | [Telegram Bot](cases/08-telegram-bot.md) | Bots e automação | Python, python-telegram-bot | Bot e Automação |
-| 09 | [HumHub Self-hosting](cases/09-humhub-self-hosting.md) | Self-hosting web | HumHub, Apache, PHP, MariaDB | Self-hosting |
-| 10 | [Site Estático e Presença Digital](cases/10-site-estatico-presenca-digital.md) | Presença digital | HTML estático, publicação web | Presença Digital |
+| 01 | [Ambiente Windows Server Corporativo](cases/05-windows-server-corporativo.md) | Infraestrutura Microsoft | Windows Server, Active Directory, DNS, DHCP, GPO | Infraestrutura Microsoft |
+| 02 | [Observabilidade com Zabbix e Grafana](cases/07-observabilidade-zabbix-grafana.md) | Observabilidade e Monitoramento | Zabbix, Grafana, alertas, dashboards | Observabilidade e Monitoramento |
+| 03 | [Programa de Suporte Técnico](cases/03-programa-suporte-tecnico.md) | Scripting e Automação Operacional | Python, Tkinter, PowerShell, rotinas Windows | Scripting e Automação Operacional |
+| 04 | [Extensões de Navegador](cases/01-extensoes-navegador.md) | Desenvolvimento de Sistemas e Extensões | JavaScript, HTML, CSS, Manifest V3 | Desenvolvimento de Sistemas e Extensões |
+| 05 | [Chatwoot com IA e Atendimento Omnichannel](cases/06-chatwoot-ia-omnichannel.md) | Integração de Sistemas e APIs | Chatwoot, Docker, PostgreSQL, Flask, bots | Integração de Sistemas e APIs |
+| 06 | [Telegram Bot](cases/08-telegram-bot.md) | Bot e Automação | Python, python-telegram-bot | Bot e Automação |
+| 07 | [Site Estático e Presença Digital](cases/10-site-estatico-presenca-digital.md) | Presença Digital | HTML estático, publicação web | Presença Digital |
+
+## Projetos em evolução
+
+Alguns estudos técnicos de Linux, containers, automação de dados e self-hosting permanecem como base de evolução do portfólio e serão substituídos ou reapresentados futuramente por projetos mais completos e visualmente documentados.
 
 ## Versão Web
 
 A pasta `site/` contém a versão visual do portfólio, com página inicial, índice de cases, páginas individuais e estrutura preparada para ilustrações técnicas contextualizadas.
 
 Acesse: https://joaoacf-dv.github.io/portfolio-tecnico/
-
-## Evolução Contínua
-
-A estrutura do repositório permite inclusão de novos cases, atualização das páginas existentes e adição gradual de ilustrações técnicas, diagramas e registros visuais públicos.
 
 LinkedIn: www.linkedin.com/in/joaoacf-dv
 

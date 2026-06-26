@@ -2,7 +2,7 @@
 
 ## Categoria
 
-Desenvolvimento de Sistemas
+Desenvolvimento de Sistemas e Extensões
 
 ## Visão Geral
 

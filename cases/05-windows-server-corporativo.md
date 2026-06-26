@@ -2,7 +2,7 @@
 
 ## Categoria
 
-Infraestrutura Corporativa
+Infraestrutura Microsoft
 
 ## Visão Geral
 

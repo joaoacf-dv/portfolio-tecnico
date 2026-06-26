@@ -1,16 +1,15 @@
 # Índice de Cases Técnicos
 
-Os cases abaixo organizam os principais projetos, laboratórios e estudos aplicados do portfólio, com foco em infraestrutura de TI, automação operacional, desenvolvimento de sistemas, integração de soluções, observabilidade e suporte técnico.
+Os cases abaixo organizam os principais projetos e estudos aplicados do portfólio, com foco em infraestrutura de TI, automação operacional, desenvolvimento de sistemas, integração de soluções, observabilidade e operações de suporte.
 
 | Nº | Case | Categoria | Stack principal |
 | -- | ---- | --------- | --------------- |
-| 01 | [Extensões de Navegador](./01-extensoes-navegador.md) | Desenvolvimento de Sistemas | JavaScript, HTML, CSS, Manifest V3 |
-| 02 | [Laboratório WSL2, Ubuntu e Docker](./02-wsl-ubuntu-docker-lab.md) | Laboratório Técnico | WSL2, Ubuntu, Docker, MySQL |
-| 03 | [Programa de Suporte Técnico](./03-programa-suporte-tecnico.md) | Automação de Suporte | Python, Tkinter, PowerShell |
-| 04 | [Sistema de Controle de Processos e Relatórios](./04-sistema-controle-processos-relatorios.md) | Automação de Processos | Python, MySQL, SQL, VBA, Excel |
-| 05 | [Ambiente Windows Server Corporativo](./05-windows-server-corporativo.md) | Infraestrutura Corporativa | Windows Server, Active Directory, DNS, DHCP, GPO |
-| 06 | [Chatwoot com IA e Atendimento Omnichannel](./06-chatwoot-ia-omnichannel.md) | Integração de Sistemas | Chatwoot, Docker, PostgreSQL, Flask |
-| 07 | [Observabilidade com Zabbix e Grafana](./07-observabilidade-zabbix-grafana.md) | Observabilidade | Zabbix, Grafana, Telegram |
-| 08 | [Telegram Bot](./08-telegram-bot.md) | Bot e Automação | Python, python-telegram-bot |
-| 09 | [HumHub Self-hosting](./09-humhub-self-hosting.md) | Self-hosting | HumHub, Apache, PHP, MariaDB |
-| 10 | [Site Estático e Presença Digital](./10-site-estatico-presenca-digital.md) | Presença Digital | HTML estático, publicação web |
+| 01 | [Ambiente Windows Server Corporativo](./05-windows-server-corporativo.md) | Infraestrutura Microsoft | Windows Server, Active Directory, DNS, DHCP, GPO |
+| 02 | [Observabilidade com Zabbix e Grafana](./07-observabilidade-zabbix-grafana.md) | Observabilidade e Monitoramento | Zabbix, Grafana, alertas, dashboards |
+| 03 | [Programa de Suporte Técnico](./03-programa-suporte-tecnico.md) | Scripting e Automação Operacional | Python, Tkinter, PowerShell, rotinas Windows |
+| 04 | [Extensões de Navegador](./01-extensoes-navegador.md) | Desenvolvimento de Sistemas e Extensões | JavaScript, HTML, CSS, Manifest V3 |
+| 05 | [Chatwoot com IA e Atendimento Omnichannel](./06-chatwoot-ia-omnichannel.md) | Integração de Sistemas e APIs | Chatwoot, Docker, PostgreSQL, Flask, bots |
+| 06 | [Telegram Bot](./08-telegram-bot.md) | Bot e Automação | Python, python-telegram-bot |
+| 07 | [Site Estático e Presença Digital](./10-site-estatico-presenca-digital.md) | Presença Digital | HTML estático, publicação web |
+
+Os domínios de Linux, containers, automação de dados e self-hosting permanecem como trilhas técnicas do portfólio, com evolução prevista para projetos futuros mais completos.

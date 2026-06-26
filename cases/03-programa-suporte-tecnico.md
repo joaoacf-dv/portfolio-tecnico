@@ -2,7 +2,7 @@
 
 ## Categoria
 
-Automação de Suporte
+Scripting e Automação Operacional
 
 ## Visão Geral
 

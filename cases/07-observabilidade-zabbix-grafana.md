@@ -2,7 +2,7 @@
 
 ## Categoria
 
-Observabilidade
+Observabilidade e Monitoramento
 
 ## Visão Geral
 

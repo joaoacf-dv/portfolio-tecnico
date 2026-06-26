@@ -2,7 +2,7 @@
 
 ## Categoria
 
-Integração de Sistemas
+Integração de Sistemas e APIs
 
 ## Visão Geral
 
