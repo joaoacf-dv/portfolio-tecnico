@@ -1,4 +1,4 @@
-# Ilustrações dos Cases
+# Capturas dos Cases
 
 Esta pasta armazena imagens públicas e sanitizadas utilizadas nas páginas dos cases.
 
@@ -8,8 +8,8 @@ Use imagens contextuais, diagramas ou prints anonimizados, preferencialmente em 
 
 ## Regras
 
-Não incluir imagens com dados reais, IPs, domínios internos, usuários, chaves de acesso, logs, credenciais ou evidências operacionais.
+Não incluir imagens com dados sensíveis, identificadores de infraestrutura, usuários, chaves de acesso, logs ou evidências operacionais.
 
 ## Ativação
 
-Cada case possui uma seção de ilustrações técnicas. Para exibir a galeria, adicione imagens à pasta do case, configure os slides no HTML correspondente e altere `data-gallery-active` para `true`.
+Cada case possui uma seção de capturas. Para exibir a galeria, adicione imagens à pasta do case, configure os slides no HTML correspondente e altere `data-gallery-active` para `true`.

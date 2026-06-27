@@ -1,7 +1,6 @@
 const LANGUAGE_KEY = "portfolio-language";
-const THEME_KEY = "portfolio-theme";
 const DEFAULT_LANGUAGE = "pt-BR";
-const DEFAULT_THEME = "light";
+const DEFAULT_THEME = "dark";
 
 const translations = {
   "pt-BR": {
@@ -41,10 +40,12 @@ const translations = {
     "hero.viewProjects": "Ver projetos",
     "hero.viewCases": "Ver todos os cases",
     "linkedin.aria": "Acessar perfil profissional no LinkedIn",
+    "footer.github": "Acessar perfil profissional no GitHub",
+    "case.githubDoc": "Ver documentação do case no GitHub",
     "case.backToCases": "Voltar aos cases",
     "case.backToHome": "Voltar à página inicial",
-    "gallery.title": "Ilustrações Técnicas",
-    "gallery.description": "Registros visuais, diagramas ou representações técnicas utilizados para contextualizar a arquitetura, o fluxo e os resultados do projeto.",
+    "gallery.title": "Capturas",
+    "gallery.description": "Capturas e registros visuais utilizados para contextualizar a arquitetura, o fluxo e os resultados do projeto.",
     "gallery.previous": "Imagem anterior",
     "gallery.next": "Próxima imagem",
     "lightbox.close": "Fechar imagem ampliada",
@@ -52,8 +53,6 @@ const translations = {
     "lightbox.next": "Próxima imagem",
     "lightbox.label": "Visualização ampliada da imagem",
     "backToTop.label": "Voltar ao topo",
-    "theme.enableDark": "Ativar modo escuro",
-    "theme.enableLight": "Ativar modo claro",
     "language.switchToEnglish": "Alternar idioma para inglês",
     "language.switchToPortuguese": "Alternar idioma para português"
   },
@@ -94,10 +93,12 @@ const translations = {
     "hero.viewProjects": "View projects",
     "hero.viewCases": "View all cases",
     "linkedin.aria": "Open professional LinkedIn profile",
+    "footer.github": "Open professional GitHub profile",
+    "case.githubDoc": "View case documentation on GitHub",
     "case.backToCases": "Back to cases",
     "case.backToHome": "Back to home",
-    "gallery.title": "Technical Illustrations",
-    "gallery.description": "Visual records, diagrams or technical representations used to contextualize the architecture, flow and results of the project.",
+    "gallery.title": "Screenshots",
+    "gallery.description": "Screenshots and visual records used to contextualize the architecture, flow and results of the project.",
     "gallery.previous": "Previous image",
     "gallery.next": "Next image",
     "lightbox.close": "Close enlarged image",
@@ -105,8 +106,6 @@ const translations = {
     "lightbox.next": "Next image",
     "lightbox.label": "Enlarged image view",
     "backToTop.label": "Back to top",
-    "theme.enableDark": "Enable dark mode",
-    "theme.enableLight": "Enable light mode",
     "language.switchToEnglish": "Switch language to English",
     "language.switchToPortuguese": "Switch language to Portuguese"
   }
@@ -252,9 +251,8 @@ const ptToEn = {
   "Desafio Técnico": "Technical Challenge",
   "Solução Desenvolvida": "Developed Solution",
   "Arquitetura / Fluxo": "Architecture / Flow",
-  "Ilustrações Técnicas": "Technical Illustrations",
-  "Ilustrações": "Illustrations",
-  "Registros visuais, diagramas ou representações técnicas utilizados para contextualizar a arquitetura, o fluxo e os resultados do projeto.": "Visual records, diagrams or technical representations used to contextualize the architecture, flow and results of the project.",
+  "Capturas": "Screenshots",
+  "Capturas e registros visuais utilizados para contextualizar a arquitetura, o fluxo e os resultados do projeto.": "Screenshots and visual records used to contextualize the architecture, flow and results of the project.",
   "Entregas Técnicas": "Technical Deliverables",
   "Competências Demonstradas": "Demonstrated Skills",
   "Resultado Técnico": "Technical Result",
@@ -620,27 +618,24 @@ function applyLanguage(language) {
   updateLightboxLabels();
 }
 
-function applyTheme(theme) {
-  currentTheme = theme === "dark" ? "dark" : "light";
-  document.documentElement.dataset.theme = currentTheme;
+function applyTheme() {
+  currentTheme = DEFAULT_THEME;
+  document.documentElement.dataset.theme = DEFAULT_THEME;
   updateControlLabels();
+}
+
+function initFixedTheme() {
+  applyTheme();
 }
 
 function updateControlLabels() {
   const isEnglish = currentLanguage === "en-US";
-  const isDark = currentTheme === "dark";
 
   document.querySelectorAll("[data-language-toggle]").forEach((button) => {
     button.textContent = isEnglish ? "PT" : "EN";
     button.setAttribute("aria-label", isEnglish
       ? getTranslation("language.switchToPortuguese")
       : getTranslation("language.switchToEnglish"));
-  });
-
-  document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
-    button.textContent = isDark ? "☀" : "☾";
-    const label = isDark ? getTranslation("theme.enableLight") : getTranslation("theme.enableDark");
-    button.setAttribute("aria-label", label);
   });
 
   document.querySelectorAll(".menu-toggle").forEach((button) => {
@@ -660,19 +655,6 @@ function initLanguageToggle() {
       const nextLanguage = currentLanguage === "pt-BR" ? "en-US" : "pt-BR";
       storeValue(LANGUAGE_KEY, nextLanguage);
       applyLanguage(nextLanguage);
-    });
-  });
-}
-
-function initThemeToggle() {
-  currentTheme = getStoredValue(THEME_KEY, ["light", "dark"], DEFAULT_THEME);
-  applyTheme(currentTheme);
-
-  document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const nextTheme = currentTheme === "light" ? "dark" : "light";
-      storeValue(THEME_KEY, nextTheme);
-      applyTheme(nextTheme);
     });
   });
 }
@@ -916,12 +898,14 @@ function revealRailTemporarily(rail) {
 }
 
 function initAmbientNetwork() {
-  if (document.querySelector(".ambient-network")) return;
+  const existingCanvas = document.querySelector(".ambient-network");
+  const canvas = existingCanvas || document.createElement("canvas");
 
-  const canvas = document.createElement("canvas");
-  canvas.className = "ambient-network";
-  canvas.setAttribute("aria-hidden", "true");
-  document.body.prepend(canvas);
+  if (!existingCanvas) {
+    canvas.className = "ambient-network";
+    canvas.setAttribute("aria-hidden", "true");
+    document.body.prepend(canvas);
+  }
 
   const ctx = canvas.getContext("2d");
   if (!ctx) {
@@ -934,184 +918,346 @@ function initAmbientNetwork() {
   let width = 0;
   let height = 0;
   let dpr = 1;
-  let points = [];
+  let nodes = [];
   let animationId = 0;
-  let scrollInfluence = window.scrollY || 0;
-  let lastFrame = 0;
 
-  function getPointCount() {
-    if (width < 560) return 22;
-    if (width < 960) return 36;
-    return 52;
+  function getGap() {
+    if (width < 520) return 80;
+    if (width < 900) return 45;
+    if (width < 1360) return 25;
+    return 30;
   }
 
-  function getColors() {
-    const isDark = document.documentElement.dataset.theme === "dark";
-    return isDark
-      ? {
-          line: "rgba(210, 245, 238, 0.16)",
-          point: "rgba(120, 214, 201, 0.42)",
-          accent: "rgba(244, 240, 232, 0.35)"
-        }
-      : {
-          line: "rgba(12, 92, 85, 0.13)",
-          point: "rgba(12, 92, 85, 0.28)",
-          accent: "rgba(164, 101, 45, 0.22)"
-        };
+  function createNodes() {
+    const gap = getGap();
+    const columns = Math.ceil(width / gap) + 4;
+    const rows = Math.ceil(height / gap) + 4;
+    nodes = [];
+
+    for (let row = -2; row < rows; row += 1) {
+      for (let column = -2; column < columns; column += 1) {
+        const seed = Math.sin((row + 1) * 12.9898 + (column + 1) * 78.233);
+        const seedB = Math.cos((row + 1) * 4.898 + (column + 1) * 21.17);
+
+        nodes.push({
+          row,
+          column,
+          baseX: column * gap + seed * 18,
+          baseY: row * gap + seedB * 10,
+          phase: seed * Math.PI * 2,
+          depth: 0.45 + Math.abs(seed) * 0.55,
+          pulse: 0.55 + Math.abs(seedB) * 0.45
+        });
+      }
+    }
   }
 
-  function createPoints() {
-    const count = getPointCount();
-    points = Array.from({ length: count }, (_, index) => {
-      const angle = Math.random() * Math.PI * 2;
-      const speed = 0.06 + Math.random() * 0.14;
-      return {
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: Math.cos(angle) * speed,
-        vy: Math.sin(angle) * speed,
-        radius: index % 7 === 0 ? 1.8 : 1.15 + Math.random() * 0.9,
-        accent: index % 8 === 0
-      };
+  function getNodePosition(node, time) {
+    const motionTime = motionQuery.matches ? 0 : time;
+    const waveField = Math.sin(node.column * 0.42 + motionTime * 0.00042 + node.phase)
+      + Math.cos(node.row * 0.36 - motionTime * 0.00034 + node.phase * 0.7);
+    const waveX = Math.sin(motionTime * 0.00032 + node.phase + node.row * 0.28);
+    const waveY = Math.cos(motionTime * 0.0003 - node.phase + node.column * 0.31);
+    let x = node.baseX + waveX * 13 * node.depth;
+    let y = node.baseY + waveY * 5 * node.depth + waveField * 3;
+
+    if (pointer.active) {
+      const dx = x - pointer.x;
+      const dy = y - pointer.y;
+      const distance = Math.hypot(dx, dy);
+      const range = width < 720 ? 150 : 220;
+
+      if (distance > 0 && distance < range) {
+        const influence = 1 - distance / range;
+        const ripple = Math.sin(distance * 0.055 - motionTime * 0.006) * influence;
+        const force = influence * 18 + ripple * 10;
+        x += (dx / distance) * force;
+        y += (dy / distance) * force;
+      }
+    }
+
+    return { x, y };
+  }
+
+  function buildPositionMap(time) {
+    const positions = nodes.map((node) => ({
+      node,
+      ...getNodePosition(node, time)
+    }));
+    const map = new Map();
+
+    positions.forEach((item) => {
+      map.set(`${item.node.row}:${item.node.column}`, item);
     });
+
+    return { positions, map };
+  }
+
+  function getNeighbor(map, node, rowOffset, columnOffset) {
+    return map.get(`${node.row + rowOffset}:${node.column + columnOffset}`);
+  }
+
+  function drawBackgroundGlow() {
+    const glowA = ctx.createRadialGradient(
+      width * 0.18,
+      height * 0.3,
+      0,
+      width * 0.18,
+      height * 0.3,
+      width * 0.55
+    );
+    glowA.addColorStop(0, "rgba(0, 180, 255, 0.1)");
+    glowA.addColorStop(0.45, "rgba(0, 180, 255, 0.035)");
+    glowA.addColorStop(1, "rgba(0, 180, 255, 0)");
+
+    ctx.fillStyle = glowA;
+    ctx.fillRect(0, 0, width, height);
+
+    const glowB = ctx.createRadialGradient(
+      width * 0.82,
+      height * 0.7,
+      0,
+      width * 0.82,
+      height * 0.62,
+      width * 0.42
+    );
+    glowB.addColorStop(0, "rgba(120, 214, 201, 0.08)");
+    glowB.addColorStop(0.48, "rgba(120, 214, 201, 0.025)");
+    glowB.addColorStop(1, "rgba(120, 214, 201, 0)");
+
+    ctx.fillStyle = glowB;
+    ctx.fillRect(0, 0, width, height);
+  }
+
+  function drawTriangle(a, b, c) {
+    const area = Math.abs(
+      a.x * (b.y - c.y)
+      + b.x * (c.y - a.y)
+      + c.x * (a.y - b.y)
+    ) / 2;
+
+    if (area < 280 || area > 8500) {
+      return;
+    }
+
+    const avgDepth = (a.node.depth + b.node.depth + c.node.depth) / 3;
+    const alpha = 0.01 + avgDepth * 0.018;
+
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.lineTo(b.x, b.y);
+    ctx.lineTo(c.x, c.y);
+    ctx.closePath();
+    ctx.fillStyle = `rgba(0, 175, 255, ${alpha})`;
+    ctx.fill();
+  }
+
+  function drawTriangles(map) {
+    nodes.forEach((node) => {
+      const a = map.get(`${node.row}:${node.column}`);
+      const b = getNeighbor(map, node, 0, 1);
+      const c = getNeighbor(map, node, 1, 0);
+      const d = getNeighbor(map, node, 1, 1);
+
+      if (a && b && c) {
+        drawTriangle(a, b, c);
+      }
+
+      if (b && c && d) {
+        drawTriangle(b, d, c);
+      }
+    });
+  }
+
+  function drawConnections(map) {
+    ctx.lineCap = "round";
+    ctx.setLineDash([]);
+
+    nodes.forEach((node) => {
+      const current = map.get(`${node.row}:${node.column}`);
+      if (!current) {
+        return;
+      }
+
+      const neighbors = [
+        getNeighbor(map, node, 0, 1),
+        getNeighbor(map, node, 0, 2),
+        getNeighbor(map, node, 1, 1),
+        getNeighbor(map, node, -1, 1),
+        getNeighbor(map, node, 1, 2),
+        getNeighbor(map, node, -1, 2),
+        getNeighbor(map, node, 0, 3)
+      ].filter(Boolean);
+
+      neighbors.forEach((neighbor) => {
+        const distance = Math.hypot(current.x - neighbor.x, current.y - neighbor.y);
+        const dx = neighbor.x - current.x;
+        const dy = neighbor.y - current.y;
+
+        if (Math.abs(dy) > Math.abs(dx) * 1.35) {
+          return;
+        }
+
+        if (distance > getGap() * 2.55) {
+          return;
+        }
+
+        let cursorBoost = 0;
+        if (pointer.active) {
+          const midX = (current.x + neighbor.x) / 2;
+          const midY = (current.y + neighbor.y) / 2;
+          const cursorDistance = Math.hypot(midX - pointer.x, midY - pointer.y);
+          const range = width < 720 ? 150 : 220;
+          cursorBoost = Math.max(0, 1 - cursorDistance / range);
+        }
+
+        const depth = Math.min(current.node.depth, neighbor.node.depth);
+        const alpha = 0.045 + depth * 0.07 + cursorBoost * 0.16;
+
+        ctx.strokeStyle = `rgba(80, 255, 230, ${alpha})`;
+        ctx.lineWidth = 0.1 + depth * 0.8 + cursorBoost * 0.34;
+        ctx.beginPath();
+        ctx.moveTo(current.x, current.y);
+        ctx.lineTo(neighbor.x, neighbor.y);
+        ctx.stroke();
+      });
+    });
+  }
+
+  function drawNodes(positions, time) {
+    const motionTime = motionQuery.matches ? 0 : time;
+
+    positions.forEach((item, index) => {
+      let cursorBoost = 0;
+
+      if (pointer.active) {
+        const distance = Math.hypot(item.x - pointer.x, item.y - pointer.y);
+        const range = width < 720 ? 130 : 180;
+        cursorBoost = Math.max(0, 1 - distance / range);
+      }
+
+      const pulse = motionQuery.matches
+        ? 0.78
+        : 0.78 + Math.sin(motionTime * 0.0016 + index * 0.41) * 0.18;
+      const radius = 0.42 + item.node.depth * 0.62 + cursorBoost * 0.75;
+      const alpha = 0.22 + item.node.depth * 0.14 + cursorBoost * 0.28;
+      const glowRadius = radius * (3.4 + cursorBoost * 1.8);
+
+      ctx.fillStyle = `rgba(0, 180, 255, ${alpha * 0.14 * pulse})`;
+      ctx.beginPath();
+      ctx.arc(item.x, item.y, glowRadius, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = `rgba(155, 255, 245, ${Math.min(0.95, alpha * pulse)})`;
+      ctx.beginPath();
+      ctx.arc(item.x, item.y, radius, 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
+
+  function draw(time = 0) {
+    ctx.clearRect(0, 0, width, height);
+    ctx.globalCompositeOperation = "source-over";
+
+    const { positions, map } = buildPositionMap(time);
+    drawBackgroundGlow();
+
+    ctx.globalCompositeOperation = "lighter";
+    drawTriangles(map);
+    drawConnections(map);
+    drawNodes(positions, time);
+
+    ctx.globalCompositeOperation = "source-over";
   }
 
   function resize() {
     width = window.innerWidth || document.documentElement.clientWidth || 1;
     height = window.innerHeight || document.documentElement.clientHeight || 1;
-    dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-    canvas.width = Math.ceil(width * dpr);
-    canvas.height = Math.ceil(height * dpr);
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    createPoints();
-    draw(0, true);
+    createNodes();
+    draw(0);
   }
 
-  function updatePoints(delta) {
-    const scrollShift = (scrollInfluence % Math.max(height, 1)) * 0.0008;
-
-    points.forEach((point) => {
-      point.x += point.vx * delta;
-      point.y += (point.vy + scrollShift) * delta;
-
-      if (pointer.active) {
-        const dx = point.x - pointer.x;
-        const dy = point.y - pointer.y;
-        const distance = Math.hypot(dx, dy);
-        const range = width < 720 ? 95 : 135;
-
-        if (distance > 0 && distance < range) {
-          const force = (1 - distance / range) * 0.22;
-          point.x += (dx / distance) * force * delta;
-          point.y += (dy / distance) * force * delta;
-        }
-      }
-
-      if (point.x < -20) point.x = width + 20;
-      if (point.x > width + 20) point.x = -20;
-      if (point.y < -20) point.y = height + 20;
-      if (point.y > height + 20) point.y = -20;
-    });
-  }
-
-  function drawConnections(colors) {
-    const maxDistance = width < 720 ? 118 : 155;
-
-    for (let i = 0; i < points.length; i += 1) {
-      for (let j = i + 1; j < points.length; j += 1) {
-        const a = points[i];
-        const b = points[j];
-        const dx = a.x - b.x;
-        const dy = a.y - b.y;
-        const distance = Math.hypot(dx, dy);
-        if (distance > maxDistance) continue;
-
-        ctx.globalAlpha = (1 - distance / maxDistance) * 0.72;
-        ctx.strokeStyle = colors.line;
-        ctx.lineWidth = 0.65;
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.stroke();
-      }
-    }
-
-    ctx.globalAlpha = 1;
-  }
-
-  function drawPoints(colors) {
-    points.forEach((point) => {
-      ctx.fillStyle = point.accent ? colors.accent : colors.point;
-      ctx.beginPath();
-      ctx.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
-      ctx.fill();
-    });
-  }
-
-  function draw(timestamp = 0, staticFrame = false) {
-    const delta = Math.min((timestamp - lastFrame) / 16.67 || 1, 2.4);
-    lastFrame = timestamp;
-
-    if (!staticFrame && !motionQuery.matches) updatePoints(delta);
-
-    ctx.clearRect(0, 0, width, height);
-    const colors = getColors();
-    drawConnections(colors);
-    drawPoints(colors);
-  }
-
-  function animate(timestamp) {
-    draw(timestamp);
-    animationId = window.requestAnimationFrame(animate);
-  }
-
-  function start() {
-    if (motionQuery.matches || animationId || document.hidden) return;
-    lastFrame = performance.now();
+  function animate(time) {
+    draw(time);
     animationId = window.requestAnimationFrame(animate);
   }
 
   function stop() {
-    if (!animationId) return;
     window.cancelAnimationFrame(animationId);
     animationId = 0;
   }
 
-  window.addEventListener("resize", resize, { passive: true });
+  function start() {
+    stop();
+    if (motionQuery.matches || document.hidden) {
+      draw(0);
+      return;
+    }
+    animationId = window.requestAnimationFrame(animate);
+  }
+
+  window.addEventListener("resize", () => {
+    resize();
+    start();
+  }, { passive: true });
+
   window.addEventListener("pointermove", (event) => {
     pointer.x = event.clientX;
     pointer.y = event.clientY;
     pointer.active = true;
   }, { passive: true });
+
   window.addEventListener("pointerleave", () => {
     pointer.active = false;
   }, { passive: true });
+
   window.addEventListener("pointercancel", () => {
     pointer.active = false;
   }, { passive: true });
-  window.addEventListener("scroll", () => {
-    scrollInfluence = window.scrollY || 0;
+
+  window.addEventListener("touchstart", (event) => {
+    const touch = event.touches[0];
+    if (!touch) {
+      return;
+    }
+
+    pointer.x = touch.clientX;
+    pointer.y = touch.clientY;
+    pointer.active = true;
+  }, { passive: true });
+
+  window.addEventListener("touchmove", (event) => {
+    const touch = event.touches[0];
+    if (!touch) {
+      return;
+    }
+
+    pointer.x = touch.clientX;
+    pointer.y = touch.clientY;
+    pointer.active = true;
+  }, { passive: true });
+
+  window.addEventListener("touchend", () => {
+    pointer.active = false;
   }, { passive: true });
 
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       stop();
     } else {
-      draw(0, true);
       start();
     }
   });
 
-  motionQuery.addEventListener?.("change", () => {
-    stop();
-    draw(0, true);
-    start();
-  });
+  motionQuery.addEventListener?.("change", start);
 
   resize();
-  draw(0, true);
   start();
 }
 
@@ -1284,6 +1430,104 @@ async function initCaseGalleries() {
   initGalleryLightbox();
 }
 
+function initProjectShowcases() {
+  const showcases = Array.from(document.querySelectorAll("[data-project-showcase]"));
+  if (!showcases.length) {
+    return;
+  }
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  showcases.forEach((showcase) => {
+    if (showcase.dataset.projectShowcaseReady === "true") {
+      return;
+    }
+
+    const cards = Array.from(showcase.querySelectorAll(".project-card"));
+    if (!cards.length) {
+      return;
+    }
+
+    showcase.dataset.projectShowcaseReady = "true";
+    let activeIndex = 0;
+    let autoplayTimer = 0;
+
+    function scrollCardIntoShowcase(card) {
+      if (!card || typeof showcase.scrollTo !== "function") {
+        return;
+      }
+
+      const targetLeft = card.offsetLeft - (showcase.clientWidth - card.clientWidth) / 2;
+      showcase.scrollTo({
+        left: Math.max(0, targetLeft),
+        behavior: reducedMotion ? "auto" : "smooth"
+      });
+    }
+
+    function setActiveCard(index, options = {}) {
+      const { scroll = false } = options;
+      activeIndex = (index + cards.length) % cards.length;
+
+      cards.forEach((card, cardIndex) => {
+        const isActive = cardIndex === activeIndex;
+        card.classList.toggle("is-active", isActive);
+        card.setAttribute("aria-current", isActive ? "true" : "false");
+      });
+
+      if (scroll) {
+        scrollCardIntoShowcase(cards[activeIndex]);
+      }
+    }
+
+    function stopAutoplay() {
+      if (!autoplayTimer) {
+        return;
+      }
+
+      window.clearInterval(autoplayTimer);
+      autoplayTimer = 0;
+    }
+
+    function startAutoplay() {
+      if (reducedMotion || cards.length < 2 || autoplayTimer) {
+        return;
+      }
+
+      autoplayTimer = window.setInterval(() => {
+        setActiveCard(activeIndex + 1);
+      }, 4200);
+    }
+
+    cards.forEach((card, index) => {
+      card.setAttribute("tabindex", "0");
+
+      card.addEventListener("pointerenter", () => {
+        stopAutoplay();
+        setActiveCard(index, { scroll: true });
+      });
+
+      card.addEventListener("focusin", () => {
+        stopAutoplay();
+        setActiveCard(index, { scroll: true });
+      });
+    });
+
+    showcase.addEventListener("pointerenter", stopAutoplay);
+    showcase.addEventListener("pointerleave", startAutoplay);
+    showcase.addEventListener("focusin", stopAutoplay);
+    showcase.addEventListener("focusout", () => {
+      window.setTimeout(() => {
+        if (!showcase.contains(document.activeElement)) {
+          startAutoplay();
+        }
+      }, 80);
+    });
+
+    setActiveCard(0);
+    startAutoplay();
+  });
+}
+
 function initBackToTop() {
   let button = document.querySelector("[data-back-to-top]");
   if (!button) {
@@ -1324,11 +1568,12 @@ function initBackToTop() {
 }
 
 function initSite() {
-  initThemeToggle();
+  initFixedTheme();
   initAmbientNetwork();
   initLanguageToggle();
   initMenu();
   initSectionHighlight();
+  initProjectShowcases();
   initCaseGalleries();
   initBackToTop();
 }
