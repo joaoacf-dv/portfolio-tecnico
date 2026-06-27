@@ -27,11 +27,22 @@ Foi implantado um servidor central com Active Directory, DNS, DHCP, políticas d
 
 ## Arquitetura / Fluxo
 
-Clientes Windows -> Servidor central -> Active Directory -> DNS e DHCP -> GPO e serviços de apoio -> Administração contínua.
+Clientes Windows → Servidor central → Active Directory → DNS e DHCP → GPO e serviços de apoio → Administração contínua.
 
-## Ilustrações Técnicas
+## Capturas
 
-A versão web deste case possui galeria de ilustrações técnicas com Server Manager, AD DS, DNS, armazenamento, GPO e ingresso de estação no domínio.
+A versão web deste case possui galeria de capturas com registros visuais contextualizados do projeto.
+
+* [Painel do Gerenciador do Servidor](../site/assets/cases/windows-server-corporativo/01-gerenciador-servidor-painel.webp)
+* [Servidor local](../site/assets/cases/windows-server-corporativo/02-gerenciador-servidor-local.webp)
+* [Todos os servidores](../site/assets/cases/windows-server-corporativo/03-gerenciador-todos-servidores.webp)
+* [Active Directory Domain Services](../site/assets/cases/windows-server-corporativo/04-ad-ds-visao-geral.webp)
+* [DNS](../site/assets/cases/windows-server-corporativo/06-dns-visao-geral.webp)
+* [Arquivos e armazenamento](../site/assets/cases/windows-server-corporativo/07-arquivos-armazenamento-servicos.webp)
+* [Zonas e registros DNS](../site/assets/cases/windows-server-corporativo/08-editor-registro-zonas-dns.webp)
+* [Estrutura de GPO](../site/assets/cases/windows-server-corporativo/09-gpo-editor-estrutura.webp)
+* [Delegação de política](../site/assets/cases/windows-server-corporativo/11-gpo-delegacao-politica.webp)
+* [Ingresso no domínio](../site/assets/cases/windows-server-corporativo/12-dominio-ingresso-concluido.webp)
 
 ## Entregas Técnicas
 
@@ -52,7 +63,3 @@ A versão web deste case possui galeria de ilustrações técnicas com Server Ma
 ## Resultado Técnico
 
 O projeto demonstra implantação e operação de componentes essenciais de infraestrutura Microsoft em cenário corporativo.
-
-## Evolução
-
-Ampliar políticas, monitoramento, rotinas de backup e documentação de recuperação operacional.

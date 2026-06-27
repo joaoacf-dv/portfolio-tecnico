@@ -25,13 +25,9 @@ Este portfólio reúne projetos, estudos aplicados e arquiteturas técnicas cons
 | 06 | [Telegram Bot](cases/08-telegram-bot.md) | Bot e Automação | Python, python-telegram-bot | Bot e Automação |
 | 07 | [Site Estático e Presença Digital](cases/10-site-estatico-presenca-digital.md) | Presença Digital | HTML estático, publicação web, organização visual | Presença Digital |
 
-## Projetos em evolução
-
-Alguns estudos técnicos de Linux, containers, automação de dados e self-hosting permanecem como base de evolução do portfólio e poderão ser reapresentados futuramente por projetos mais completos e visualmente documentados.
-
 ## Versão Web
 
-A pasta `site/` contém a versão visual do portfólio, com página inicial, índice de cases, páginas individuais e estrutura preparada para ilustrações técnicas contextualizadas.
+A pasta `site/` contém a versão visual do portfólio, com página inicial, índice de cases, páginas individuais e estrutura preparada para capturas contextualizadas.
 
 Acesse: https://joaoacf-dv.github.io/portfolio-tecnico/
 

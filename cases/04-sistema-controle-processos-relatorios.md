@@ -1,7 +1,5 @@
 # Sistema de Controle de Processos e Relatórios
 
-> Estudo técnico complementar mantido como base de evolução do portfólio.
-
 ## Categoria
 
 Automação de Dados e Relatórios
@@ -28,11 +26,11 @@ Foi planejado um fluxo com modelagem relacional, scripts Python, consultas SQL e
 
 ## Arquitetura / Fluxo
 
-Dados administrativos -> Banco relacional -> Scripts Python -> Consultas SQL -> Relatórios Excel/VBA.
+Dados administrativos → Banco relacional → Scripts Python → Consultas SQL → Relatórios Excel/VBA.
 
-## Ilustrações Técnicas
+## Capturas
 
-A versão web possui estrutura preparada para ilustrações técnicas futuras, sem exibir seção vazia ao visitante.
+A versão web possui estrutura preparada para capturas futuras, mantendo a apresentação pública limpa e objetiva.
 
 ## Entregas Técnicas
 
@@ -53,7 +51,3 @@ A versão web possui estrutura preparada para ilustrações técnicas futuras, s
 ## Resultado Técnico
 
 O estudo organiza uma base para automação administrativa e relatórios com dados estruturados.
-
-## Evolução
-
-Evoluir para painel visual, importação e exportação automatizadas e documentação técnica com ilustrações.

@@ -26,11 +26,11 @@ Foi estruturada uma página estática com organização visual, separação entr
 
 ## Arquitetura / Fluxo
 
-Conteúdo profissional -> Curadoria visual -> Página estática -> Revisão pública -> Publicação web.
+Conteúdo profissional → Curadoria visual → Página estática → Revisão pública → Publicação web.
 
-## Ilustrações Técnicas
+## Capturas
 
-A versão web possui estrutura preparada para ilustrações técnicas futuras, sem exibir seção vazia ao visitante.
+A versão web possui estrutura preparada para capturas futuras, mantendo a apresentação pública limpa e objetiva.
 
 ## Entregas Técnicas
 
@@ -51,7 +51,3 @@ A versão web possui estrutura preparada para ilustrações técnicas futuras, s
 ## Resultado Técnico
 
 O projeto demonstra uma presença digital simples, funcional e organizada para comunicação profissional.
-
-## Evolução
-
-Ampliar páginas de cases, enriquecer assets e revisar acessibilidade.

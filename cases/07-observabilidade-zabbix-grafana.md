@@ -26,11 +26,16 @@ Foi estruturado um ambiente com Zabbix para monitoramento, Grafana para visualiz
 
 ## Arquitetura / Fluxo
 
-Hosts monitorados -> Zabbix -> Regras e triggers -> Grafana -> Alertas -> Operação técnica.
+Hosts monitorados → Zabbix → Regras e triggers → Grafana → Alertas → Operação técnica.
 
-## Ilustrações Técnicas
+## Capturas
 
-A versão web deste case possui galeria de ilustrações técnicas com telas de monitoramento, dashboards e fluxo de alertas.
+A versão web deste case possui galeria de capturas com registros visuais contextualizados do projeto.
+
+* [Dashboard de observabilidade](../site/assets/cases/observabilidade-zabbix-grafana/observabilidade-dashboard-01.webp)
+* [Alertas e eventos](../site/assets/cases/observabilidade-zabbix-grafana/observabilidade-alertas-02.webp)
+* [Fluxo de monitoramento](../site/assets/cases/observabilidade-zabbix-grafana/observabilidade-fluxo-03.webp)
+* [Integração de coleta, visualização e notificação](../site/assets/cases/observabilidade-zabbix-grafana/observabilidade-fluxo-0301.webp)
 
 ## Entregas Técnicas
 
@@ -51,7 +56,3 @@ A versão web deste case possui galeria de ilustrações técnicas com telas de 
 ## Resultado Técnico
 
 O projeto demonstra monitoramento, visualização e alertas em uma base integrada de observabilidade.
-
-## Evolução
-
-Adicionar mais templates, métricas customizadas, painéis por serviço e rotinas de resposta a incidentes.

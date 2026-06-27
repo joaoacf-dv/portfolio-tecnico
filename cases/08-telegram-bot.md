@@ -24,11 +24,11 @@ Foi criada uma base com handlers, callbacks, menus e respostas organizadas, prep
 
 ## Arquitetura / Fluxo
 
-Usuário -> Comando ou menu -> Handler -> Callback -> Resposta -> Registro técnico.
+Usuário → Comando ou menu → Handler → Callback → Resposta → Registro técnico.
 
-## Ilustrações Técnicas
+## Capturas
 
-A versão web possui estrutura preparada para ilustrações técnicas futuras, sem exibir seção vazia ao visitante.
+A versão web possui estrutura preparada para capturas futuras, mantendo a apresentação pública limpa e objetiva.
 
 ## Entregas Técnicas
 
@@ -49,7 +49,3 @@ A versão web possui estrutura preparada para ilustrações técnicas futuras, s
 ## Resultado Técnico
 
 O estudo demonstra uma base funcional para bots simples, extensíveis e úteis em rotinas de automação.
-
-## Evolução
-
-Adicionar estado persistente, integrações externas, painel administrativo e documentação visual.

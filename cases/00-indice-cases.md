@@ -17,5 +17,3 @@ Os cases abaixo organizam os principais projetos e estudos aplicados do portfól
 - [Laboratório WSL2, Ubuntu e Docker](./02-wsl-ubuntu-docker-lab.md)
 - [Sistema de Controle de Processos e Relatórios](./04-sistema-controle-processos-relatorios.md)
 - [HumHub Self-hosting](./09-humhub-self-hosting.md)
-
-Esses estudos permanecem como base de evolução do portfólio e poderão ser reapresentados futuramente por projetos mais completos e visualmente documentados.

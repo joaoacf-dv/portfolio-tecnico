@@ -26,11 +26,17 @@ Foram organizadas extensões independentes com popup, scripts de conteúdo, serv
 
 ## Arquitetura / Fluxo
 
-Usuário aciona extensão -> Popup ou atalho local -> Preferências no navegador -> Script de conteúdo aplica regras -> Interface recebe ajustes visuais.
+Usuário aciona extensão → Popup ou atalho local → Preferências no navegador → Script de conteúdo aplica regras → Interface recebe ajustes visuais.
 
-## Ilustrações Técnicas
+## Capturas
 
-A versão web deste case possui galeria de ilustrações técnicas com navegação contextual por extensão.
+A versão web deste case possui galeria de capturas com registros visuais contextualizados do projeto.
+
+* [WhatsApp Privacy Shield — configurações](../site/assets/cases/extensoes-navegador/whatsapp-privacy-shield-configuracoes-01.webp)
+* [WhatsApp Privacy Shield — privacidade local](../site/assets/cases/extensoes-navegador/whatsapp-privacy-shield-configuracoes-0102.webp)
+* [Gerenciador de acessos](../site/assets/cases/extensoes-navegador/gerenciador-sites-acessos-01.webp)
+* [Loki Auto Refresh](../site/assets/cases/extensoes-navegador/loki-auto-refresh-limpeza-dados-01.webp)
+* [Controle rápido](../site/assets/cases/extensoes-navegador/controle-rapido-bloqueio-abas-notas-01.webp)
 
 ## Entregas Técnicas
 
@@ -51,7 +57,3 @@ A versão web deste case possui galeria de ilustrações técnicas com navegaç�
 ## Resultado Técnico
 
 O conjunto demonstra domínio de extensões úteis para rotinas reais de navegação, com foco em execução local, interface simples e comportamento previsível.
-
-## Evolução
-
-Ampliar pacotes de extensão, automatizar empacotamento e documentar fluxos de uso por cenário.

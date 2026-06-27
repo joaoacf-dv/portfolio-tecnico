@@ -1,7 +1,5 @@
 # Laboratório WSL2, Ubuntu e Docker
 
-> Estudo técnico complementar mantido como base de evolução do portfólio.
-
 ## Categoria
 
 Linux, Ubuntu e Containers
@@ -28,11 +26,11 @@ Foi estruturado um ambiente híbrido com host Windows, distribuição Ubuntu em 
 
 ## Arquitetura / Fluxo
 
-Host Windows -> WSL2/Ubuntu -> Docker Compose -> Containers de serviço -> Banco e validação local.
+Host Windows → WSL2/Ubuntu → Docker Compose → Containers de serviço → Banco e validação local.
 
-## Ilustrações Técnicas
+## Capturas
 
-A versão web possui estrutura preparada para ilustrações técnicas futuras, sem exibir seção vazia ao visitante.
+A versão web possui estrutura preparada para capturas futuras, mantendo a apresentação pública limpa e objetiva.
 
 ## Entregas Técnicas
 
@@ -53,7 +51,3 @@ A versão web possui estrutura preparada para ilustrações técnicas futuras, s
 ## Resultado Técnico
 
 O estudo estabelece uma base funcional para testar serviços em containers usando WSL2 e Ubuntu.
-
-## Evolução
-
-Reapresentar o estudo como projeto completo, com catálogo de serviços, ilustrações técnicas e documentação visual ampliada.

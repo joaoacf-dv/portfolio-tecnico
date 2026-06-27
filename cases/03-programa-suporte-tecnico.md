@@ -26,11 +26,15 @@ Foi desenvolvido um launcher desktop com menus por categoria, interface em Tkint
 
 ## Arquitetura / Fluxo
 
-Operador -> Launcher desktop -> Menus por categoria -> Scripts PowerShell -> Recursos de suporte -> Empacotamento controlado.
+Operador → Launcher desktop → Menus por categoria → Scripts PowerShell → Recursos de suporte → Empacotamento controlado.
 
-## Ilustrações Técnicas
+## Capturas
 
-A versão web deste case possui galeria de ilustrações técnicas com telas do aplicativo e execução de rotinas de suporte.
+A versão web deste case possui galeria de capturas com registros visuais contextualizados do projeto.
+
+* [Menu principal e configuração](../site/assets/cases/programa-suporte-tecnico/00_terminal-suporte_menu-principal-e-configuracao-sistema.webp)
+* [Programas padrões e ferramentas](../site/assets/cases/programa-suporte-tecnico/01_terminal-suporte_programas-padroes-e-ferramentas.webp)
+* [Recursos e utilidades](../site/assets/cases/programa-suporte-tecnico/02_terminal-suporte_recursos-e-utilidades.webp)
 
 ## Entregas Técnicas
 
@@ -51,7 +55,3 @@ A versão web deste case possui galeria de ilustrações técnicas com telas do 
 ## Resultado Técnico
 
 O projeto reduz dispersão operacional e demonstra capacidade de transformar scripts em ferramenta prática de suporte.
-
-## Evolução
-
-Adicionar registro de execuções, perfis de operação, assinatura de pacote e novas rotinas de diagnóstico.
