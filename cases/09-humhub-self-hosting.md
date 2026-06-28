@@ -10,7 +10,7 @@ Estudo de implantação self-hosted de aplicação web baseada em stack Linux, A
 
 ## Desafio Técnico
 
-Aplicações web self-hosted exigem preparação de servidor, configuração de serviços, permissões e manutenção básica.
+Aplicações web self-hosted exigem preparação de servidor, configuração de serviços, permissões e manutenção operacional.
 
 ## Solução Desenvolvida
 
@@ -26,7 +26,7 @@ Foi organizada uma base de instalação para HumHub em ambiente Linux com Apache
 
 ## Arquitetura / Fluxo
 
-Servidor Linux → Apache/PHP → MariaDB → Aplicação HumHub → Manutenção básica.
+Servidor Linux → Apache/PHP → MariaDB → Aplicação HumHub → Manutenção operacional.
 
 ## Capturas
 
@@ -58,7 +58,7 @@ A versão web deste case possui galeria de capturas com registros visuais contex
 - Implantação self-hosted.
 - Configuração Apache/PHP.
 - Preparação de banco de dados.
-- Operação básica em Linux.
+- Operação inicial em Linux.
 - Documentação de instalação.
 
 ## Resultado Técnico

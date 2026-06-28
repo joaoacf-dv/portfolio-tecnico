@@ -10,7 +10,7 @@ Aplicação desktop para centralizar rotinas de suporte Windows por meio de inte
 
 ## Desafio Técnico
 
-Rotinas de suporte costumam ficar dispersas em comandos, scripts e procedimentos manuais. O desafio foi reunir essas ações em uma ferramenta simples para execução assistida.
+Rotinas de suporte costumam ficar dispersas em comandos, scripts e procedimentos manuais. O desafio foi reunir essas ações em uma ferramenta objetiva para execução assistida.
 
 ## Solução Desenvolvida
 

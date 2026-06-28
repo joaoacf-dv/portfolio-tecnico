@@ -10,7 +10,7 @@ Coleção de extensões para navegador com foco em privacidade visual, produtivi
 
 ## Desafio Técnico
 
-Interfaces web podem expor informações na tela, acumular abas e exigir ajustes repetitivos de navegação. O desafio foi criar recursos locais, simples de acionar e independentes de backend.
+Interfaces web podem expor informações na tela, acumular abas e exigir ajustes repetitivos de navegação. O desafio foi criar recursos locais, rápidos de acionar e independentes de backend.
 
 ## Solução Desenvolvida
 
@@ -56,4 +56,4 @@ A versão web deste case possui galeria de capturas com registros visuais contex
 
 ## Resultado Técnico
 
-O conjunto demonstra domínio de extensões úteis para rotinas reais de navegação, com foco em execução local, interface simples e comportamento previsível.
+O conjunto demonstra domínio de extensões úteis para rotinas reais de navegação, com foco em execução local, interface objetiva e comportamento previsível.

@@ -1,32 +1,40 @@
-# Site Estático e Presença Digital
+# Desenvolvimento Web e Presença Digital
 
 ## Categoria
 
-Presença Digital
+Desenvolvimento Web
 
 ## Visão Geral
 
-Projeto de presença digital com página estática, curadoria visual e organização de conteúdo profissional para publicação web.
+Este case apresenta uma frente de capacidade em desenvolvimento web e presença digital, com foco na estruturação de interfaces públicas, organização visual de conteúdo, responsividade, navegação e publicação web.
+
+A proposta não é apresentar o portfólio como um projeto isolado, mas consolidar a capacidade de transformar conteúdo técnico e profissional em uma experiência web organizada, legível e evolutiva.
 
 ## Desafio Técnico
 
-Uma presença pública precisa apresentar informações profissionais de forma clara, leve e controlada, sem expor detalhes internos ou excesso de complexidade.
+O desafio consiste em estruturar uma base de apresentação web que seja clara, responsiva, publicável e preparada para evolução, permitindo incorporar futuramente novos projetos, interfaces e aplicações desenvolvidas.
+
+A frente exige atenção a hierarquia visual, semântica, navegação, responsividade, consistência de conteúdo e organização técnica para publicação pública.
 
 ## Solução Desenvolvida
 
-Foi estruturada uma página estática com organização visual, separação entre conteúdo público e material interno, além de base para publicação e evolução de apresentação profissional.
+A solução foi reorganizada como uma frente técnica de desenvolvimento web, contemplando estruturação de páginas, composição visual, navegação, organização de conteúdo público, adaptação responsiva e publicação em ambiente web.
+
+A abordagem prioriza clareza, manutenibilidade, separação entre conteúdo público e materiais privados, além de uma base preparada para expansão com novos projetos web.
 
 ## Stack Técnica
 
-- HTML estático
-- Publicação web
+- HTML
+- CSS
+- JavaScript
+- UI responsiva
 - Organização visual
-- Carrd
-- Ereemby
+- Publicação web
+- Estruturação de conteúdo
 
 ## Arquitetura / Fluxo
 
-Conteúdo profissional → Curadoria visual → Página estática → Revisão pública → Publicação web.
+Conteúdo profissional → Estrutura de página → Interface responsiva → Publicação web → Evolução por projetos
 
 ## Capturas
 
@@ -34,20 +42,22 @@ A versão web possui estrutura preparada para capturas futuras, mantendo a apres
 
 ## Entregas Técnicas
 
-- Estrutura simples de página pública.
-- Organização visual de informações.
-- Publicação web leve.
-- Separação entre conteúdo público e interno.
-- Base reutilizável para apresentação profissional.
+- Estruturação de páginas públicas e navegação.
+- Organização visual de conteúdo profissional.
+- Base responsiva para leitura em diferentes dispositivos.
+- Separação entre conteúdo público e materiais privados.
+- Preparação para incorporação futura de projetos web.
+- Consolidação de presença digital como ativo profissional.
 
 ## Competências Demonstradas
 
-- Curadoria de conteúdo técnico.
-- Organização de presença digital.
-- Publicação estática.
-- Clareza de apresentação.
-- Controle de exposição pública.
+- Desenvolvimento de interfaces web.
+- Organização de conteúdo para publicação pública.
+- Estruturação visual e responsiva.
+- Curadoria técnica de apresentação profissional.
+- Publicação e manutenção de página web.
+- Planejamento de evolução incremental de projetos.
 
 ## Resultado Técnico
 
-O projeto demonstra uma presença digital simples, funcional e organizada para comunicação profissional.
+A frente consolida uma base profissional de desenvolvimento web aplicada à criação de interfaces públicas, organização visual, responsividade, publicação e evolução incremental, servindo como ativo demonstrável de capacidade técnica para futuros projetos web.

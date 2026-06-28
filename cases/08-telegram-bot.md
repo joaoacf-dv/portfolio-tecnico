@@ -6,7 +6,7 @@ Bot e Automação
 
 ## Visão Geral
 
-Bot em Python para estruturar comandos, menus, respostas e automações simples no Telegram.
+Bot em Python para estruturar comandos, menus, respostas e automações pontuais no Telegram.
 
 ## Desafio Técnico
 
@@ -35,7 +35,7 @@ A versão web possui estrutura preparada para capturas futuras, mantendo a apres
 - Estrutura de comandos.
 - Menus e callbacks.
 - Respostas organizadas.
-- Registro básico de execução.
+- Registro técnico de execução.
 - Base extensível para novas integrações.
 
 ## Competências Demonstradas
@@ -48,4 +48,4 @@ A versão web possui estrutura preparada para capturas futuras, mantendo a apres
 
 ## Resultado Técnico
 
-O estudo demonstra uma base funcional para bots simples, extensíveis e úteis em rotinas de automação.
+O estudo demonstra uma base funcional para bots organizados, extensíveis e úteis em rotinas de automação.

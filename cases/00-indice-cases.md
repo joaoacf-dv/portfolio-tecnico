@@ -10,7 +10,7 @@ Os cases abaixo organizam os principais projetos e estudos aplicados do portfól
 | 04 | [Extensões de Navegador](./01-extensoes-navegador.md) | Desenvolvimento de Sistemas e Extensões | JavaScript, HTML, CSS, Manifest V3 |
 | 05 | [Chatwoot com IA e Atendimento Omnichannel](./06-chatwoot-ia-omnichannel.md) | Integração de Sistemas e APIs | Chatwoot, Docker, PostgreSQL, Flask, bots |
 | 06 | [Telegram Bot](./08-telegram-bot.md) | Bot e Automação | Python, python-telegram-bot |
-| 07 | [Site Estático e Presença Digital](./10-site-estatico-presenca-digital.md) | Presença Digital | HTML estático, publicação web, organização visual |
+| 07 | [Desenvolvimento Web e Presença Digital](./10-site-estatico-presenca-digital.md) | Desenvolvimento Web | HTML, CSS, JavaScript, UI responsiva, publicação web |
 
 ## Estudos técnicos complementares
 
