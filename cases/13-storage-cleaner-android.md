@@ -42,12 +42,24 @@ O aplicativo não promete boost de CPU/RAM, limpeza silenciosa de cache de terce
 
 - V1.0.0: desenvolvimento concluído;
 - homologação física Android 16/API 36: aprovada;
-- App Bundle de produção: gerado;
-- APK instalável de release: gerado e assinatura verificada;
+- App Bundle de produção: gerado e preservado;
+- APK instalável de release: gerado, preservado e assinatura verificada;
 - signing de release: externo ao repositório;
-- freeze e recuperação offline: concluídos;
-- hashes SHA-256 e artefatos de recuperação: consolidados.
+- freeze técnico final em 22/09/2026: concluído;
+- snapshot do código, Git bundle completo e manifesto de recuperação: validados;
+- hashes SHA-256 dos artefatos de produção e preservação: consolidados.
+
+## Freeze técnico final
+
+O baseline funcional e de identidade foi preservado em referências dedicadas de freeze/archive/backup. O pacote offline final inclui o APK de preservação, o APK release assinado, o AAB de produção, snapshot do source, Git bundle completo, recovery manifest e inventário SHA-256.
+
+Referências principais:
+
+- fechamento funcional fisicamente homologado: `b741f50a23722118455189a473705566acf40482`;
+- identidade física de release: `da94148485d3b71f6228369eb3952e2f57f9d4fa`;
+- baseline canônico de release engineering: `9aad144398b97311612e5ccebb3f10ccde3db24c`;
+- fechamento final de governança/preservação: `b1d8c585d7059d5b4906559948024daf1da07ae1`.
 
 ## Resultado técnico
 
-Produto Android funcionalmente concluído e homologado, com release consolidado, artefatos de produção preservados e processo de recuperação documentado.
+Produto Android funcionalmente concluído e homologado, com release consolidado, artefatos de produção preservados, freeze técnico verificável e processo de recuperação offline testado de ponta a ponta.
