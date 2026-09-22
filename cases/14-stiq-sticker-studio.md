@@ -8,7 +8,7 @@ Desenvolvimento Mobile · Edição de Mídia · Integração Android
 
 Stiq é um aplicativo Android nativo para criação, edição, organização e exportação de figurinhas estáticas e animadas. O produto combina edição visual, composição por camadas, biblioteca local, gerenciamento de pacotes e integração com WhatsApp em um fluxo centrado no usuário.
 
-O baseline funcional foi consolidado e homologado fisicamente em Android 16 / API 36, com build, testes unitários, lint, compilação de instrumentação, validação nativa e regressão física concluídos.
+A etapa funcional foi consolidada e homologada fisicamente em Android 16 / API 36. O baseline final inclui desenho livre no Text Studio, borracha exclusiva para rabiscos, composição por camadas e persistência sem abertura de uma nova arquitetura de dados.
 
 ## Recursos entregues
 
@@ -18,6 +18,9 @@ O baseline funcional foi consolidado e homologado fisicamente em Android 16 / AP
 - recortes geométricos, laço manual, borracha e restauração;
 - múltiplas camadas de texto e imagens PNG;
 - cores de texto predefinidas e personalizadas;
+- desenho livre no Text Studio com lápis, seleção de cor e controle de espessura;
+- borracha dedicada ao desenho, isolada da borracha utilizada sobre imagens;
+- ordem visual consolidada entre PNGs, desenho e texto;
 - editor animado com enquadramento, recorte, timeline e prévia;
 - exportação WebP estática e Animated WebP;
 - biblioteca local de projetos e figurinhas;
@@ -31,22 +34,37 @@ Kotlin · Jetpack Compose · Android SDK · Room · Gradle · GitHub Actions · 
 
 ## Fluxo de produto
 
-`Importar / criar -> editar -> pré-visualizar -> finalizar -> biblioteca -> pacote -> WhatsApp`
+`Importar / criar -> editar -> compor -> pré-visualizar -> finalizar -> biblioteca -> pacote -> WhatsApp`
 
-A interface mantém o canvas como superfície principal e apresenta ferramentas contextuais para recorte, laço, borracha, texto, imagens e ajustes de enquadramento.
+O Text Studio permite combinar PNGs, desenho livre e texto sobre a mesma composição. A ferramenta de desenho usa uma camada interna transparente de 512×512 e reutiliza a infraestrutura de `ImageLayer` já existente, preservando o Project Document V3 e evitando novas migrations de banco, schema ou codec.
 
 ## Engenharia de qualidade
 
-A consolidação funcional foi conduzida com validação incremental e regressão sobre dispositivo físico. O estado final possui:
+A consolidação funcional foi conduzida com validação incremental, CI e regressão sobre dispositivo físico. O estado final possui:
 
 - testes unitários aprovados;
 - lint aprovado;
 - build Android aprovado;
 - APK de instrumentação compilado;
 - verificação de alinhamento ELF nativo de 16 KB;
+- instrumentação focada da ferramenta de desenho aprovada em dispositivo físico;
 - homologação física em moto g56 5G, Android 16 / API 36;
-- baseline funcional congelado e preservado para rollback;
-- `main` consolidado após CI pós-integração.
+- cold start e validação de foreground aprovados;
+- scan final de crash/ANR com `ISSUE_COUNT=0`;
+- baseline funcional final preservado em referências dedicadas de freeze, backup e archive;
+- integração canônica no `main` após validação física.
+
+## Congelamento funcional
+
+A última linha funcional validada foi encerrada antes da evolução visual da interface.
+
+Autoridades técnicas da etapa:
+
+- candidato fisicamente homologado: `9a6236682d6fe17e5a1fd89e0b0d513ba459f83d`;
+- integração canônica: `4b8e36f607c6df82034c94105b197c20fe6fae9d`;
+- árvore Git comum: `d4e97f33b8efefa4f0cefff7ca35ae28f515884a`.
+
+O candidato e a integração canônica possuem a mesma árvore de produto. A próxima etapa é dedicada a interface/design, usando este baseline como referência de regressão funcional.
 
 ## Privacidade e operação
 
@@ -55,11 +73,13 @@ O processamento principal ocorre localmente no dispositivo. A aplicação trabal
 ## Estado
 
 - funcionalidade principal: concluída;
+- último upgrade funcional — desenho livre: concluído;
 - homologação física: aprovada;
 - estabilidade funcional: congelada;
 - integração do baseline ao `main`: concluída;
-- fase seguinte: identidade comercial e evolução visual, sem alteração funcional por padrão.
+- backup e recuperação: formalizados;
+- fase seguinte: evolução visual e de interface, preservando os contratos funcionais homologados.
 
 ## Resultado técnico
 
-Aplicativo Android funcional, estável, operacional e reconstruível, com editores estático e animado, composição avançada, persistência local, biblioteca, pacotes e integração com WhatsApp consolidados em um baseline validado.
+Aplicativo Android funcional, estável, operacional e reconstruível, com editores estático e animado, composição avançada, desenho livre isolado, persistência local, biblioteca, pacotes e integração com WhatsApp consolidados em um baseline validado.
