@@ -24,6 +24,8 @@ Este portfólio reúne projetos, estudos aplicados e arquiteturas técnicas cons
 | 05 | [Chatwoot com IA e Atendimento Omnichannel](cases/06-chatwoot-ia-omnichannel.md) | Integração de Sistemas e APIs | Chatwoot, Docker, PostgreSQL, Flask, bots | Integração de Sistemas e APIs |
 | 06 | [Telegram Bot](cases/08-telegram-bot.md) | Bot e Automação | Python, python-telegram-bot | Bot e Automação |
 | 07 | [Desenvolvimento Web e Presença Digital](cases/10-site-estatico-presenca-digital.md) | Desenvolvimento Web | HTML, CSS, JavaScript, UI responsiva, publicação web | Desenvolvimento Web |
+| 08 | [Storage Cleaner — Android Storage Utility](cases/13-storage-cleaner-android.md) | Desenvolvimento Mobile | Kotlin, Jetpack Compose, MediaStore, SAF, Android SDK | Desenvolvimento Mobile e Engenharia de Release |
+| 09 | [Stiq — Sticker Studio](cases/14-stiq-sticker-studio.md) | Desenvolvimento Mobile | Kotlin, Jetpack Compose, Room, libwebp, Android NDK | Desenvolvimento Mobile e Edição de Mídia |
 
 ## Versão Web
 
