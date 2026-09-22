@@ -11,6 +11,8 @@ Os cases abaixo organizam os principais projetos e estudos aplicados do portfól
 | 05 | [Chatwoot com IA e Atendimento Omnichannel](./06-chatwoot-ia-omnichannel.md) | Integração de Sistemas e APIs | Chatwoot, Docker, PostgreSQL, Flask, bots |
 | 06 | [Telegram Bot](./08-telegram-bot.md) | Bot e Automação | Python, python-telegram-bot |
 | 07 | [Desenvolvimento Web e Presença Digital](./10-site-estatico-presenca-digital.md) | Desenvolvimento Web | HTML, CSS, JavaScript, UI responsiva, publicação web |
+| 08 | [Storage Cleaner — Android Storage Utility](./13-storage-cleaner-android.md) | Desenvolvimento Mobile e Engenharia de Release | Kotlin, Jetpack Compose, MediaStore, SAF, Android SDK |
+| 09 | [Stiq — Sticker Studio](./14-stiq-sticker-studio.md) | Desenvolvimento Mobile e Edição de Mídia | Kotlin, Jetpack Compose, Room, libwebp, Android NDK |
 
 ## Estudos técnicos complementares
 
