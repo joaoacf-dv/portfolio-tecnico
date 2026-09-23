@@ -29,9 +29,9 @@
           <header class="case-hero">
             <p class="case-kicker">Aplicativo Android · Criação e Edição de Figurinhas</p>
             <h1>Stiq</h1>
-            <p class="case-intro">Sticker studio Android para criar, editar, organizar e exportar figurinhas estáticas e animadas, com composição visual, biblioteca local, pacotes e integração com WhatsApp.</p>
+            <p class="case-intro">Aplicativo Android nativo para criação, edição, organização e exportação de figurinhas estáticas e animadas, com composição por camadas, persistência local, gerenciamento de pacotes e integração com WhatsApp.</p>
             <div class="case-meta">
-              <span class="badge badge--type">Freeze funcional final homologado</span>
+              <span class="badge badge--type">Release Android homologada</span>
               <span class="badge badge--type">Android 16 · API 36</span>
             </div>
             <div class="stack-list">
@@ -47,7 +47,7 @@
 
           <section class="case-section">
             <h2>Visão Geral</h2>
-            <p>O Stiq concentra criação, edição e organização de figurinhas em um fluxo mobile único. O usuário pode partir de imagem, GIF, vídeo ou de uma composição vazia com texto, emojis, imagens PNG e desenho livre, editar visualmente o resultado e seguir para biblioteca, pacotes e WhatsApp.</p>
+            <p>O Stiq foi desenvolvido como uma aplicação Android de ciclo completo para criação e gerenciamento de figurinhas. O fluxo contempla importação de imagem, GIF e vídeo, composição com texto, emojis, imagens PNG e desenho livre, edição visual, exportação, persistência em biblioteca local e organização em pacotes para integração com WhatsApp.</p>
           </section>
 
           <section class="case-section">
@@ -67,7 +67,7 @@
             <ul class="case-list">
               <li>Editor estático com enquadramento, pan, zoom e rotação.</li>
               <li>Recortes geométricos, laço manual, borracha e restauração.</li>
-              <li>Criação de figurinha somente com texto, emojis e imagens PNG.</li>
+              <li>Criação a partir de composição própria com texto, emojis e imagens PNG.</li>
               <li>Múltiplas camadas de texto e PNG com transformação independente.</li>
               <li>Cores de texto predefinidas e personalizadas.</li>
               <li>Desenho livre no Text Studio com lápis, cores e controle de espessura.</li>
@@ -83,26 +83,26 @@
 
           <section class="case-section">
             <h2>Composição e Persistência</h2>
-            <p>O pipeline preserva a edição não destrutiva durante o projeto e compõe enquadramento, máscaras, imagens, desenho e texto no resultado final. O desenho livre reutiliza a infraestrutura existente de ImageLayer e Project Document V3, sem nova migration de Room, schema ou codec. A biblioteca mantém projetos persistidos, prévias renderizadas e artefatos de exportação para continuidade do fluxo até os pacotes.</p>
+            <p>A arquitetura de composição mantém edição não destrutiva durante o projeto e aplica, de forma determinística, enquadramento, máscaras, imagens, desenho e texto no resultado final. A persistência local utiliza projetos versionados, prévias renderizadas e artefatos de exportação, permitindo retomada da edição e continuidade do fluxo entre editor, biblioteca e pacotes.</p>
           </section>
 
           <section class="case-section">
-            <h2>Validação e Estabilidade</h2>
+            <h2>Engenharia, Validação e Release</h2>
             <ul class="case-list">
-              <li>Testes unitários, lint e build Android aprovados.</li>
-              <li>APK de instrumentação compilado no pipeline de CI.</li>
-              <li>Validação nativa de alinhamento ELF de 16 KB.</li>
+              <li>Testes unitários, lint e builds Android executados como gates de qualidade.</li>
+              <li>Builds debug e release validados antes da geração do artefato final.</li>
+              <li>Validação de alinhamento ELF nativo de 16 KB para bibliotecas embarcadas.</li>
+              <li>APK release assinado, alinhado e verificado com <code>zipalign</code> e <code>apksigner</code>.</li>
+              <li>Identidade do pacote, versão e integridade do artefato verificadas, com SHA-256 registrado.</li>
               <li>Homologação física concluída em moto g56 5G com Android 16 / API 36.</li>
-              <li>Instrumentação focada do desenho, cold start e foreground aprovados.</li>
-              <li>Scan físico final de crash/ANR com <code>ISSUE_COUNT=0</code>.</li>
-              <li>Baseline funcional final preservado em referências dedicadas de freeze, backup e archive.</li>
-              <li>Linha canônica consolidada no <code>main</code> após CI pós-integração aprovado.</li>
+              <li>Instalação limpa, inicialização, foreground e fluxos principais validados em dispositivo real.</li>
+              <li>Scan físico final de crash/ANR concluído com <code>ISSUE_COUNT=0</code>.</li>
             </ul>
           </section>
 
           <section class="case-section">
             <h2>Resultado Técnico</h2>
-            <p>Aplicativo Android funcional, estável, operacional e reconstruível, com criação estática e animada, edição visual avançada, desenho livre isolado, biblioteca, pacotes e integração com WhatsApp consolidados em um baseline homologado. A próxima etapa é exclusivamente de evolução visual e de interface, usando o freeze funcional como referência de regressão.</p>
+            <p>O Stiq consolida um ciclo completo de engenharia Android: arquitetura de interface com Jetpack Compose, persistência local com Room, edição e composição de mídia, integração nativa com WebP e NDK/CMake, organização de projetos e pacotes, integração com WhatsApp, testes, geração de release, assinatura e homologação em hardware real. O case demonstra capacidade de transformar requisitos de produto em uma aplicação móvel operacional, validada e tecnicamente rastreável.</p>
           </section>
 
           <div class="case-source">
