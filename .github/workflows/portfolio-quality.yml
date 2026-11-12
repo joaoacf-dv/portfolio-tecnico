@@ -1,0 +1,34 @@
+name: Portfolio public case quality
+
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'cases/**'
+      - 'README.md'
+      - '.github/workflows/portfolio-quality.yml'
+      - 'tools/check-public-ciop-case.mjs'
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'cases/**'
+      - 'README.md'
+      - '.github/workflows/portfolio-quality.yml'
+      - 'tools/check-public-ciop-case.mjs'
+
+permissions:
+  contents: read
+
+jobs:
+  public-case:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript syntax
+        run: node --check site/script.js
+      - name: Check public case, links and translations
+        run: node tools/check-public-ciop-case.mjs

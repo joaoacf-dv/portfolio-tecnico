@@ -26,6 +26,7 @@ Este portfólio reúne projetos, estudos aplicados e arquiteturas técnicas cons
 | 07 | [Desenvolvimento Web e Presença Digital](cases/10-site-estatico-presenca-digital.md) | Desenvolvimento Web | HTML, CSS, JavaScript, UI responsiva, publicação web | Desenvolvimento Web |
 | 08 | [Storage Cleaner — Android Storage Utility](cases/13-storage-cleaner-android.md) | Desenvolvimento Mobile | Kotlin, Jetpack Compose, MediaStore, SAF, Android SDK | Desenvolvimento Mobile e Engenharia de Release |
 | 09 | [Stiq — Sticker Studio](cases/14-stiq-sticker-studio.md) | Desenvolvimento Mobile | Kotlin, Jetpack Compose, Room, libwebp, Android NDK | Desenvolvimento Mobile e Edição de Mídia |
+| 10 | [CIOP Manager AD — Gestão de Identidades](cases/15-ciop-manager-ad.md) | Engenharia Windows e Governança | Qt 6, C++17, PowerShell, Active Directory, WiX MSI | Engenharia de Sistemas e Governança |
 
 ## Versão Web
 
