@@ -13,6 +13,7 @@ Os cases abaixo organizam os principais projetos e estudos aplicados do portfól
 | 07 | [Desenvolvimento Web e Presença Digital](./10-site-estatico-presenca-digital.md) | Desenvolvimento Web | HTML, CSS, JavaScript, UI responsiva, publicação web |
 | 08 | [Storage Cleaner — Android Storage Utility](./13-storage-cleaner-android.md) | Desenvolvimento Mobile e Engenharia de Release | Kotlin, Jetpack Compose, MediaStore, SAF, Android SDK |
 | 09 | [Stiq — Sticker Studio](./14-stiq-sticker-studio.md) | Desenvolvimento Mobile e Edição de Mídia | Kotlin, Jetpack Compose, Room, libwebp, Android NDK |
+| 10 | [CIOP Manager AD — Gestão de Identidades](./15-ciop-manager-ad.md) | Engenharia Windows e Governança | Qt 6, C++17, PowerShell, Active Directory, WiX MSI |
 
 ## Estudos técnicos complementares
 
