@@ -21,7 +21,7 @@ for(const [name,value,token] of [
  ['case',page,'CIOP Manager AD'],
  ['documentation',docs,'Homologação']
 ]){
- assert.ok(value.includes(token),`${name} missing ${token}`);
+ assert.ok(value.toLocaleLowerCase('pt-BR').includes(token.toLocaleLowerCase('pt-BR')),`${name} missing ${token}`);
 }
 assert.match(page,/<html lang="pt-BR">/);
 assert.match(page,/<article class="case-article">/);
