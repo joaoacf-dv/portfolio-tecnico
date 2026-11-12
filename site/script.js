@@ -4,6 +4,8 @@ const DEFAULT_THEME = "dark";
 
 const translations = {
   "pt-BR": {
+    "ciop.viewCase": "Ver case",
+    "ciop.flowAria": "Fluxo conceitual de operação",
     "ciop.pageTitle": "CIOP Manager AD — Gestão de Identidades | Portfólio Técnico",
     "ciop.description": "Case técnico sobre gestão governada de identidades Active Directory com interface Windows Qt/C++, automação PowerShell e instalador MSI. Conteúdo público sanitizado.",
     "ciop.kicker": "Aplicação Windows · Gestão de Identidades e Governança",
@@ -106,6 +108,8 @@ const translations = {
     "language.switchToPortuguese": "Alternar idioma para português"
   },
   "en-US": {
+    "ciop.viewCase": "View case",
+    "ciop.flowAria": "Conceptual operational flow",
     "ciop.pageTitle": "CIOP Manager AD — Identity Management | Technical Portfolio",
     "ciop.description": "Technical case study of governed Active Directory identities using Windows Qt/C++, PowerShell automation and MSI deployment. Sanitized public content.",
     "ciop.kicker": "Windows Application · Identity Management and Governance",
