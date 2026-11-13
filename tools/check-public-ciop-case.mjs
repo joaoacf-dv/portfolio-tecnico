@@ -30,7 +30,7 @@ assert.match(page,/Implantado em ambiente institucional/);
 assert.match(page,/case\.githubDoc/);
 assert.match(page,/data-i18n="ciop\.intro"/);
 assert.match(page,/data-i18n-aria-label="ciop\.flowAria"/);
-assert.match(docs,/\*\*Limite:\*\*/);
+assert.match(docs,/\*\*Situação de implantação:\*\*/);
 
 const keys=[...new Set([...homepage.matchAll(/data-i18n(?:-title|-meta-description|-aria-label)?="(ciop\.[^"]+)"/g),
   ...catalog.matchAll(/data-i18n(?:-title|-meta-description|-aria-label)?="(ciop\.[^"]+)"/g),
