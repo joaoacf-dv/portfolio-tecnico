@@ -43,7 +43,7 @@ O RSAT é um recurso do Windows e **não é incorporado como binário ao MSI**.
 ## Evidências e maturidade
 O pipeline Windows concluiu compilação MSVC, testes automatizados, smoke test demonstrativo, construção WiX, extração administrativa do MSI e checagem dos arquivos obrigatórios. O pacote final teve checksum SHA-256 conferido.
 
-**Limite:** esses resultados de CI não equivalem à homologação de instalação, autenticação, delegação ou escrita em um Active Directory real. A implantação em infraestrutura institucional depende de autorização, políticas de TI e testes controlados.
+**Situação de implantação:** sistema implantado em ambiente institucional. As evidências públicas de CI demonstram integridade do código e do empacotamento, sem substituir as políticas de TI, permissões delegadas e controles operacionais da instituição.
 
 ## Curadoria e confidencialidade
 O código operacional, scripts de domínio, configurações, capturas reais, logs, instaladores, identificadores, endereços e dados de usuários não são publicados neste repositório. O conteúdo é exclusivamente um case técnico descritivo e sanitizado, produzido para fins profissionais.
