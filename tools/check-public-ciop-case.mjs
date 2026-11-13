@@ -19,14 +19,14 @@ for(const [name,value,token] of [
  ['README',readme,'cases/15-ciop-manager-ad.md'],
  ['cases index',index,'15-ciop-manager-ad.md'],
  ['case',page,'CIOP Manager AD'],
- ['documentation',docs,'Homologação']
+ ['documentation',docs,'implantado']
 ]){
  assert.ok(value.toLocaleLowerCase('pt-BR').includes(token.toLocaleLowerCase('pt-BR')),`${name} missing ${token}`);
 }
 assert.match(page,/<html lang="pt-BR">/);
 assert.match(page,/<article class="case-article">/);
 assert.match(page,/<section class="case-section">/);
-assert.match(page,/Homologação de domínio pendente/);
+assert.match(page,/Implantado em ambiente institucional/);
 assert.match(page,/case\.githubDoc/);
 assert.match(page,/data-i18n="ciop\.intro"/);
 assert.match(page,/data-i18n-aria-label="ciop\.flowAria"/);
